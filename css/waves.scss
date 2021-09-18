@@ -1,0 +1,84 @@
+// best seen at 1500px or less
+
+.ocean { 
+  height: 100vh;
+  width:100vw;
+  position:absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+}
+
+.wave {
+  background: url(/img/waves/wavewhite4x.png) repeat-x;
+  background-size: 100vw 4vh;
+  position: absolute;
+  width: 300vw;
+  height: 4vh;
+  transform: translate3d(0,0,0);
+  animation: wave 37s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  opacity: 1;
+  top: calc(100vh - 4vh);
+  margin-left: 0;
+}
+
+.wave:nth-of-type(2) {
+  animation: wave 23s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, swell 4s ease -1.25s infinite;
+  opacity: .4;
+  margin-left: -13vw;
+}
+
+.wave:nth-of-type(3) {
+    animation: wave 13s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -2s infinite, swell 7s ease -5.25s infinite;
+    opacity: .6;
+    margin-left: -77vw;
+}
+
+.flipwavecontainer {
+    position: relative;
+    top: 0;
+}
+
+.flipwave {
+    background: url(/img/waves/wavewhiteflip4x.png) repeat-x;
+    background-size: 100vw 4vh;
+    position: absolute;
+    width: 300vw;
+    height: 4vh;
+    transform: translate3d(0,0,0);
+    animation: wave 33s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    opacity: 1;
+    top: 0;
+    margin-left: 0;
+    z-index: 1;
+  }
+  
+  .flipwave:nth-of-type(2) {
+    animation: wave 18s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, swell 4s ease -1.25s infinite;
+    opacity: .4;
+    margin-left: -13vw;
+  }
+  
+  .flipwave:nth-of-type(3) {
+      animation: wave 12s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -2s infinite, swell 7s ease -5.25s infinite;
+      opacity: .6;
+      margin-left: -77vw;
+  }
+
+@keyframes wave {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-7px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}

@@ -1,0 +1,129 @@
+@import "fonts.scss";
+@import "colors.scss";
+@import "variables.scss";
+@import "waves.scss";
+
+body {
+    background-color: var(--light-grey);
+    z-index: 0;
+}
+
+head-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background-color: var(--dark-grey);
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+}
+
+map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-grey);
+    width: 50%;
+    height: 100%;
+    -webkit-box-shadow: 5px 1px 15px 5px var(--dark-grey); 
+    box-shadow: 5px 1px 15px 5px var(--dark-grey);
+}
+
+logo-container {
+    position: absolute;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 3;
+    text-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 12px var(--dark-grey), 0px 0px 12px var(--dark-grey);
+}
+
+logo-container logo {
+    position: relative;
+    display: inline-block;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
+    height: var(--logo-height);
+    width: 100%;
+    background-image: url(/img/logos/dark.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+logo-container info {
+    position: relative;
+    display: inline-block;
+    left: 0;
+    width: 100%;
+}
+
+.title, .subtitle{
+    font-family: 'herolight', sans-serif;
+    text-align: center;
+}
+
+.title {
+    font-size: 7vh;
+    color: var(--dark-orange);
+    line-height: 5vh;
+    padding: 0;
+    padding-top: 2vh;
+}
+
+.subtitle-wrapper{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+}
+
+.subtitle {
+    display: table;
+    font-size: 2vh;
+    color: var(--lighter-grey);
+    letter-spacing: 10px;
+    width: 100%;
+}
+
+.right, .left {
+    display: table-cell;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+    padding-left: calc(70vmin * 0.7 / 8 / 4 / 3);
+    font-family: 'heroregular', sans-serif;
+}
+
+.abstract {
+    font-family: 'Muli', sans-serif;
+    color: white;
+    white-space: pre-line;
+    font-size: 1.2vh;
+}
+
+.abstract .tagline {
+    color: var(--light-orange);
+    padding-top: 2%;
+}
