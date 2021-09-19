@@ -202,6 +202,8 @@ $(document).ready(function(){
         lat = position.coords.latitude;
         long = position.coords.longitude;
 
+        console.log(lat, long);
+
         google.maps.event.addDomListener(window, 'load', init);
     },
     () => {
