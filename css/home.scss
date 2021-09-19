@@ -53,12 +53,9 @@ logo-container {
 logo-container logo {
     position: relative;
     display: inline-block;
-    // top: 0;
-    // left: 50%;
-    // transform: translateX(-50%);
     height: var(--logo-height);
     width: 100%;
-    background-image: url(/img/logos/dark.svg);
+    background-image: url('./img/logos/dark.svg');
     background-repeat: no-repeat;
     background-position-x: center;
     -webkit-filter: drop-shadow(2px 0px 12px var(--dark-grey));
@@ -128,4 +125,14 @@ logo-container info {
 .abstract .tagline {
     color: var(--light-orange);
     padding-top: 2%;
+}
+
+menu {
+    position: absolute;
+    display: table;
+    top: 0;
+    right: 0;
+    width: calc(100% - var(--logo-container-width) / 2);
+    border-color: purple;
+    border-style: dashed;
 }
