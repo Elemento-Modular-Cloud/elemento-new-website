@@ -21,9 +21,9 @@ head-container {
 map {
     position: absolute;
     top: 0;
-    left: 0;
+    left: calc(var(--logo-container-width) / 2);
     height: 100%;
-    width: 100%;
+    width: calc(100% - var(--logo-container-width) / 2);
     pointer-events: none;
 }
 
@@ -61,6 +61,8 @@ logo-container logo {
     background-image: url(/img/logos/dark.svg);
     background-repeat: no-repeat;
     background-position-x: center;
+    -webkit-filter: drop-shadow(2px 0px 12px var(--dark-grey));
+    filter: drop-shadow(2px 0px 12px var(--dark-grey));
 }
 
 logo-container info {
