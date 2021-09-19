@@ -12,7 +12,7 @@
 .wave {
   background: url('../img/waves/wavewhite4x.png') repeat-x;
   background-size: 100vw 4vh;
-  position: absolute;
+  position: fixed;
   width: 300vw;
   height: 4vh;
   transform: translate3d(0,0,0);

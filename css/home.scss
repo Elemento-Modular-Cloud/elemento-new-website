@@ -3,9 +3,20 @@
 @import "variables.scss";
 @import "waves.scss";
 
+html {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
 body {
     background-color: var(--light-grey);
     z-index: 0;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
 head-container {
