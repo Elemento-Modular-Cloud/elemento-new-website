@@ -204,14 +204,14 @@ $(document).ready(function(){
 
         console.log(lat, long);
 
-        google.maps.event.addDomListener(window, 'load', init);
+        init()
     },
     () => {
         console.log("Defaulting to Cuneo");
         lat = 44.384477;
         long = 7.542671;
 
-        google.maps.event.addDomListener(window, 'load', init);
+        init()
     },
     {timeout: 500});
   });
