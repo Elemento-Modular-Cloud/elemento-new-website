@@ -166,69 +166,46 @@ const styles = [
     }
 ]
 
-$(document).ready(function(){
-    var lat = -31.9600;
-    var long = 115.8300;
+var lat = -31.9600;
+var long = 115.8300;
 
+function init() {
+    var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 15,
+
+        disableDefaultUI: true,
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(lat, long), // Kings Park
+
+        // How you would like to style the map. 
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: styles
+    };
+
+    // Get the HTML DOM element that will contain your map 
+    // We are using a div with id="map" seen below in the <body>
+    var mapElement = document.getElementById('map');
+
+    // Create the Google Map using out element and options defined above
+    var map = new google.maps.Map(mapElement, mapOptions);
+}
+
+$(document).ready(function(){
     navigator.geolocation.getCurrentPosition((position) => {
         console.log("Getting your position");
         lat = position.coords.latitude;
         long = position.coords.longitude;
 
         google.maps.event.addDomListener(window, 'load', init);
-    
-        function init() {
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 15,
-
-            disableDefaultUI: true,
-    
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(lat, long), // Kings Park
-    
-            // How you would like to style the map. 
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: styles
-        };
-    
-        // Get the HTML DOM element that will contain your map 
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
-    
-        // Create the Google Map using out element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-        }
     },
     () => {
         console.log("Defaulting to Cuneo");
-        lat = 44.384477
-        long = 7.542671
+        lat = 44.384477;
+        long = 7.542671;
 
         google.maps.event.addDomListener(window, 'load', init);
-    
-        function init() {
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 15,
-
-            disableDefaultUI: true,
-    
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(lat, long), // Kings Park
-    
-            // How you would like to style the map. 
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: styles
-        };
-    
-        // Get the HTML DOM element that will contain your map 
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
-    
-        // Create the Google Map using out element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-        }
     },
-    { timeout: 500});
+    {timeout: 500});
   });
