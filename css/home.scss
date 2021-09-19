@@ -58,7 +58,7 @@ logo-container {
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
     z-index: 3;
-    text-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 12px var(--dark-grey), 0px 0px 12px var(--dark-grey);
+    text-shadow: 0px 0px 8px var(--dark-grey), 0px 0px 8px var(--dark-grey), 0px 0px 8px var(--dark-grey);
 }
 
 logo-container logo {
@@ -142,8 +142,33 @@ menu {
     position: absolute;
     display: table;
     top: 0;
-    right: 0;
-    width: calc(100% - var(--logo-container-width) / 2);
-    border-color: purple;
-    border-style: dashed;
+    right: 5%;
+    width: fit-content;
+    z-index: 10;
+}
+
+menu .item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'herobold', sans-serif;
+    font-size: 2vh;
+    color: white;
+    text-transform: uppercase;
+    text-overflow: clip;
+    width: 10vw;
+    padding: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
+    -webkit-text-stroke-width: 0.05vh;
+    -webkit-text-stroke-color: var(--dark-grey);
+    -webkit-text-fill-color: white;
+    transition: color .2s ease-in-out, -webkit-text-fill-color .2s ease-in-out;
+}
+
+menu .item:hover {
+    color: var(--light-orange);
+    -webkit-text-fill-color: var(--light-orange);
+    cursor: pointer;
 }
