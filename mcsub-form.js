@@ -1,6 +1,6 @@
 var email = document.getElementById('email')
 
-new Mcsub('#form-wrapper-id', {
+new Mcsub('#mailchimpform', {
     user:  '4f312c8c16810c3c59ec2d0d6',
     list:  '4a0560ee16',
     callback:  'cb',
