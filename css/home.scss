@@ -40,7 +40,7 @@ head-container {
     left: 0;
     width: 70%;
     height: 100%;
-    z-index: 2;
+    z-index: 12;
 }
 
 map-container {
@@ -99,15 +99,23 @@ map-shadow {
     }
 }
 
-sidebar {
+sidebar, shadow {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--dark-grey);
     width: 50%;
     height: 100%;
-    -webkit-box-shadow: 5px 1px 15px 5px var(--dark-grey); 
-    box-shadow: 5px 1px 15px 5px var(--dark-grey);
+}
+
+sidebar {
+    background-color: var(--dark-grey);
+}
+
+shadow {
+    width: 35%;
+    z-index: 12;
+    -webkit-box-shadow: 5px 0 15px 5px var(--dark-grey); 
+    box-shadow: 5px 0 15px 5px var(--dark-grey);
 }
 
 logo-container {
