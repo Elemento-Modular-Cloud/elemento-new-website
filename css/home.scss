@@ -47,7 +47,8 @@ map {
     animation: zoomslow 200s ease-in-out infinite;
 }
 
-map-fader {
+map::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -58,6 +59,7 @@ map-fader {
 }
 
 map-shadow {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +67,8 @@ map-shadow {
     width: 100%;
     -webkit-box-shadow: inset 0 10px 15px 5px var(--dark-grey); 
     box-shadow: inset 0 10px 15px 5px var(--dark-grey);
-    z-index: 2;
+    opacity: .5;
+    // z-index: 2;
 }
 
 @keyframes zoomslow {
@@ -96,7 +99,7 @@ sidebar {
 logo-container {
     position: absolute;
     display: inline-block;
-    width: fit-content;
+    width: var(--logo-container-width);
     height: fit-content;
     left: 50%;
     top: 50%;
@@ -130,9 +133,9 @@ logo-container info {
 }
 
 .title {
-    font-size: 7vh;
+    font-size: 9vh;
     color: var(--dark-orange);
-    line-height: 5vh;
+    line-height: 7vh;
     padding: 0;
     padding-top: 2vh;
 }
@@ -146,7 +149,7 @@ logo-container info {
 
 .subtitle {
     display: table;
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: var(--lighter-grey);
     letter-spacing: 10px;
     width: 100%;
@@ -170,11 +173,20 @@ logo-container info {
     font-family: 'heroregular', sans-serif;
 }
 
+.abstract-wrapper {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: fit-content;
+    height: fit-content;
+    transform: translateX(-50%);
+}
+
 .abstract {
     font-family: 'Muli', sans-serif;
     color: white;
     white-space: pre-line;
-    font-size: 1.2vh;
+    font-size: 2vh;
 }
 
 .abstract .tagline {
@@ -215,4 +227,142 @@ menu .item:hover {
     color: var(--light-orange);
     -webkit-text-fill-color: var(--light-orange);
     cursor: pointer;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content }
+    &:-moz-placeholder { @content }
+    &::-moz-placeholder { @content }
+    &:-ms-input-placeholder { @content }
+}
+
+form-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 25%;
+    height: fit-content;
+    background-color: white;
+    transform: translate3d(-25%, -50%, 0);
+    // z-index: 10;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 20px 0 var(--dark-grey); 
+    box-shadow: 0 0 20px 0 var(--dark-grey);
+}
+
+.form-title, .form-description, .form-disclaimer {
+    max-width: 80%;
+    width: max-content;
+    margin: auto;
+    position: relative;
+    font-family: 'Muli', sans-serif;
+}
+
+.form-title {
+    font-weight: bold;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 2vh;
+    text-align: center;
+}
+
+.form-description {
+    text-align: left;
+}
+
+.form-disclaimer {
+    text-align: center;
+    font-size: 1vh;
+    color: var(--lighter-grey);
+    transform: translateY(-150%);
+}
+
+form {
+    position: relative;
+    margin-top: 6vh;
+    margin-bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 80px;
+    font-family: 'Muli', sans-serif;
+    transform: translate3d(0, -50%, 0);
+    background: var(--dark-grey);
+    border-radius: 4px;
+}
+  
+  input {
+    @include placeholder {
+      color: #fff;
+      text-transform: capitalize;
+      padding-left: 5%;
+    }
+    padding: 5%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 0;
+    border-radius: 4px;
+    outline: 0;
+    background-color: transparent;
+    // padding: 2em 1em 1em 1em;
+    color: var(--dark-grey);
+    font-size: 2vh;
+    transition: background 0.35s ease-out, padding-top 0.35s ease-out, color 0.35s ease-out;
+    font-family: 'Muli', sans-serif;
+}
+
+input:focus {
+    background: var(--light-grey);
+    // padding-top: 10%;
+    color: white;
+}
+
+input:focus + label {
+    transform: translateY(-135%) scale(0.8);
+    color: whitesmoke;
+}
+  
+label {
+    position: absolute;
+    left: 1em;
+    top: 50%;
+    margin-top: -8px;
+    color: #fff;
+    text-transform: capitalize;
+    transform-origin: left center;
+    transition: transform 0.25s ease-out, color 0.25s ease-out;
+}
+  
+button {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    width: 100px;
+    height: 100%;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 1em;
+    background-color: var(--light-orange);
+    color: var(--dark-grey);
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+    z-index: 10;
+    transition: opacity 0.35s ease-out, width 0.5s ease-out, background 0.25s ease-out, border-radius 0.25s ease-out;
+}
+
+input:focus + label + button {
+    opacity: 1;
+}
+  
+button.is-active {
+    background: var(--light-orange);
+    color: var(--dark-grey);
+}
+  
+button.is-done {
+    border-radius: 4px;
+    width: 100%;
+    opacity: 1;
 }
