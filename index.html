@@ -4,6 +4,10 @@
         <link async rel="shortcut icon" type="image/x-icon" href="./img/icons/LogoDark.ico">
         <link async rel="apple-touch-icon" href="./img/icons/LogoDark.ico">
         <link async rel="stylesheet" type="text/css" href="./css/home.scss"/>
+        <link async rel="stylesheet" type="text/css" href="./css/menu.scss"/>
+        <link async rel="stylesheet" type="text/css" href="./css/page.scss"/>
+        <link async rel="stylesheet" type="text/css" href="./css/subform.scss"/>
+        <link async rel="stylesheet" type="text/css" href="./css/waves.scss"/>
 
         <meta name="description" content="Elemento Modular Cloud">
         <meta name="keywords" content="Elemento, Modular, Cloud, 2.0, Virtualization, Container">
@@ -27,63 +31,92 @@
     </head>
 
     <body>
-        <map-container>
-            <map id="map"></map>
-            <map-shadow></map-shadow>
-        </map-container>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <menu>
-            <div class="item">Mission</div>
-            <div class="item">Team</div>
-            <div class="item">Products</div>
-            <div class="item">Contacts</div>
-        </menu>
-        <head-container>
-            <sidebar></sidebar>
-            <logo-container>
-                <logo></logo>
-                <info>
-                    <div class="title">ELEMENTO</div>
-                    <div class="subtitle-wrapper">
-                        <div class="subtitle">
-                            <table>
-                                <div class="right">MODULAR</div>
-                                <div class="left">CLOUD</div>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="abstract-wrapper">
-                        <div class="abstract">
-                            No data centres, no licenses, no maintenance, no effort.
-                            Be on your own or leverage on someone else unused resources.
-                            <div class="tagline">Public. Private. Hybrid. Choosing your cloud has never been so easy.</div></div>
-                    </div>
-                </info>
-            </logo-container>
-        </head-container>
+        <div class="index">
+            <map-container>
+                <map id="map"></map>
+                <map-shadow></map-shadow>
+            </map-container>
 
-        <form-container>
-            <div class="form-title">
-                Getting curious? Register now!
+            <!-- <div w3-include-html="/waves.html"></div> -->
+
+            <div w3-include-html="/menu.html"></div>
+
+            <div w3-include-html="/subform.html"></div>
+
+            <head-container>
+                <sidebar></sidebar>
+                <logo-container>
+                    <logo></logo>
+                    <info>
+                        <div class="title">ELEMENTO</div>
+                        <div class="subtitle-wrapper">
+                            <div class="subtitle">
+                                <table>
+                                    <div class="right">MODULAR</div>
+                                    <div class="left">CLOUD</div>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="abstract-wrapper">
+                            <div class="abstract">
+                                No data centres, no licenses, no maintenance, no effort.
+                                Be on your own or leverage on someone else unused resources.
+                                <div class="tagline">Public. Private. Hybrid. Choosing your cloud has never been so easy.</div></div>
+                        </div>
+                    </info>
+                </logo-container>
+            </head-container>
+        </div>
+
+        <page-container>
+            <div class="page">
+                <div class="content">
+                    <h1>Mission</h1>
+                    <text>
+                        At Elemento we create a plug and play Cloud solution made of our software, installed on our standard hardware and supported by awesome support plans.
+                        
+                        An user can run Windows, Linux and Macos workloads on a complete and refined interface, logging in to its resources from anywhere, using a smartphone, a tablet, another computer or an Elemento terminal.
+
+                        At any time, for any reason, scaling an Elemento Cloud deployment is as easy as adding new building blocks: our software and our experts do the rest, in less than 5 minutes from box to operation.
+                    </text>
+                    <img src="/img/schemas/grid.svg"/>
+                    <text>
+                        Elemento Cloud solutions are like no other. Each customer can tailor its Elemento infrastructure depending on what he prefers.
+                        
+                        Elemento allows one to create a private Cloud much easier than any other solution, but Elemento can be used as a public Cloud provider.
+                        In fact Elemento customers can opt for sharing their unused resources, enabling compute power cross-rental and acting together as a neutral Cloud provider.
+
+                        Elemento is the only solution capable of providing a seamless experience between private, public and hybrid deployments.
+                    </text>
+                </div>
             </div>
-            <div class="form-description">
-                You'll receive updates, blog links and useful information about Elemento's progress.
+            <div class="page">
+                <div class="content">
+                    <h1>Team</h1>
+                    <text>
+                        
+                    </text>
+                </div>
             </div>
-            <div id="mailchimpform" class="subscribe">
-                <form action="https://brixtol.us5.list-manage.com/subscribe/post" novalidate>
-                    <input type="email" id="email" name="EMAIL"/>
-                    <label for="email">email address</label>
-                    <button id="button" type="submit" name="subscribe">Submit</button>
-                </form>
+            <div class="page">
+                <div class="content">
+                    <h1>Products</h1>
+                    <text>
+                        
+                    </text>
+                </div>
+                <div class="content">
+                    <h1>Contacts</h1>
+                    <text>
+                        
+                    </text>
+                </div>
             </div>
-            <div id="response" class="response" style="display:none"></div>
-            <div class="form-disclaimer">
-                Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
-            </div>
-        </form-container>
-        <script type= "text/javascript" src="./mcsub-min.js"></script>
-        <script type= "text/javascript" src="./mcsub-form.js"></script>
+            <div w3-include-html="/footer.html"></div>
+        </page-container>
+
+        <script>
+            w3IncludeHTML();
+        </script>
     </body>
 </html>
