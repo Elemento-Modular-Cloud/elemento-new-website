@@ -29,14 +29,43 @@ head-container {
     z-index: 2;
 }
 
-map {
+map-container {
     position: absolute;
     top: 0;
     left: calc(var(--logo-container-width) / 2);
     height: 100%;
     width: calc(100% - var(--logo-container-width) / 2);
+}
+
+map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     pointer-events: none;
-    animation: zoomslow 100s ease-in-out infinite;
+    animation: zoomslow 200s ease-in-out infinite;
+}
+
+map-fader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark-grey);
+    opacity: .1;
+}
+
+map-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-box-shadow: inset 0 10px 15px 5px var(--dark-grey); 
+    box-shadow: inset 0 10px 15px 5px var(--dark-grey);
+    z-index: 2;
 }
 
 @keyframes zoomslow {
@@ -47,9 +76,9 @@ map {
     }
     
     50% {
-        -moz-transform: scale(1.1) rotate(1deg);
-        -webkit-transform: scale(1.1) rotate(1deg);
-        transform: scale(1.1) rotate(1deg);
+        -moz-transform: scale(1.4) rotate(4deg);
+        -webkit-transform: scale(1.4) rotate(4deg);
+        transform: scale(1.4) rotate(4deg);
     }
 }
 
