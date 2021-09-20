@@ -4,6 +4,9 @@ const styles = [
         "elementType": "labels.text.fill",
         "stylers": [
             {
+                "visibility": "off"
+            },
+            {
                 "saturation": 36
             },
             {
@@ -19,7 +22,7 @@ const styles = [
         "elementType": "labels.text.stroke",
         "stylers": [
             {
-                "visibility": "on"
+                "visibility": "off"
             },
             {
                 "color": "#000000"
@@ -94,10 +97,10 @@ const styles = [
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#FFD464"
             },
             {
-                "lightness": 17
+                "lightness": -55
             }
         ]
     },
@@ -106,13 +109,13 @@ const styles = [
         "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#FFD464"
             },
             {
-                "lightness": 29
+                "lightness": -50
             },
             {
-                "weight": 0.2
+                "weight": 0.005
             }
         ]
     },
@@ -121,10 +124,13 @@ const styles = [
         "elementType": "geometry",
         "stylers": [
             {
+                "visibility": "off"
+            },
+            {
                 "color": "#000000"
             },
             {
-                "lightness": 18
+                "lightness": 40
             }
         ]
     },
@@ -160,19 +166,21 @@ const styles = [
                 "color": "#ffc600"
             },
             {
-                "lightness": 17
+                "lightness": 0
             }
         ]
     }
 ]
 
-var lat = -31.9600;
-var long = 115.8300;
+var lat = 44.384477;
+var long = 7.542671;
 
 function init() {
+    console.log(lat, long)
+
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 15,
+        zoom: 9,
 
         disableDefaultUI: true,
 
@@ -197,21 +205,22 @@ function init() {
 }
 
 $(document).ready(function(){
-    navigator.geolocation.getCurrentPosition((position) => {
-        console.log("Getting your position");
-        lat = position.coords.latitude;
-        long = position.coords.longitude;
-
-        console.log(lat, long);
-
-        init()
-    },
-    () => {
-        console.log("Defaulting to Cuneo");
-        lat = 44.384477;
-        long = 7.542671;
-
-        init()
-    },
-    {timeout: 500});
+    if (typeof geoip2 !== 'undefined'){
+        geoip2.city(
+        function(geoIPResponse) {
+            console.log("Geolocation success.");
+            console.log(geoIPResponse);
+            lat = geoIPResponse.location.latitude;
+            long = geoIPResponse.location.longitude;
+            console.log(lat, long);
+            init();
+        }, 
+        function(geoIPResponse) {
+            console.log("Geolocation failed. Defaulting.");
+            init();
+        });
+    } else {
+        console.log("Geoip not found. Defaulting.");
+        init();
+    }
   });

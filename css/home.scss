@@ -36,6 +36,21 @@ map {
     height: 100%;
     width: calc(100% - var(--logo-container-width) / 2);
     pointer-events: none;
+    animation: zoomslow 100s ease-in-out infinite;
+}
+
+@keyframes zoomslow {
+    0% {
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    50% {
+        -moz-transform: scale(1.1) rotate(1deg);
+        -webkit-transform: scale(1.1) rotate(1deg);
+        transform: scale(1.1) rotate(1deg);
+    }
 }
 
 sidebar {
