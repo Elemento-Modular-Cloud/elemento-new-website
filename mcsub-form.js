@@ -1,4 +1,5 @@
 var email = document.getElementById('email')
+var label = document.getElementById('email-label')
 
 new Mcsub('#mailchimpform', {
     user:  '4f312c8c16810c3c59ec2d0d6',
@@ -7,8 +8,9 @@ new Mcsub('#mailchimpform', {
     reponse:  '#response',
     onInit(){
         console.log(this.element) // Example
-        email.addEventListener('keydown', function() {
+        email.addEventListener('click', function() {
             button.classList.add('is-active');
+            label.classList.add('min-label')
         });
         this.button.addEventListener('click', function(e){
             this.classList.add('is-done','is-active');
