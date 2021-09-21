@@ -13,6 +13,7 @@
 }
 
 .page .content * {
+    position: relative;
     width: 100%;
 }
 
@@ -38,4 +39,28 @@ img {
     margin-top: 3vh;
     margin-bottom: 3vh;
     text-align: center;
+}
+
+.team {
+    display: table;
+    table-layout: fixed;
+    width: 70%;
+    margin: 15%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.team .person {
+    display: table-row;
+    width: 100%;
+}
+
+.team .person .picture {
+    display: table-cell;
+    width: 30%;
+}
+
+.team .person .text {
+    display: table-cell;
+    width: 70%;
 }
