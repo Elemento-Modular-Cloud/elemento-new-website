@@ -160,3 +160,11 @@ button.is-done {
     width: 100%;
     opacity: 1;
 }
+
+button.is-invalid {
+    border-radius: 4px;
+    width: 100%;
+    opacity: 1;
+    color: white;
+    background-color: brown;
+}
