@@ -32,3 +32,7 @@ menu .item:hover {
     -webkit-text-fill-color: var(--light-orange);
     cursor: pointer;
 }
+
+menu a {
+    text-decoration: none;
+}
