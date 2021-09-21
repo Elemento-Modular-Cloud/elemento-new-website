@@ -38,11 +38,29 @@
                 <map-shadow></map-shadow>
             </map-container>
 
+            <form-container>
+                <div class="form-title">
+                    Getting curious? Register now!
+                </div>
+                <div class="form-description">
+                    You'll receive updates, blog links and useful information about Elemento's progress.
+                </div>
+                <div id="mailchimpform" class="subscribe">
+                    <form action="https://brixtol.us5.list-manage.com/subscribe/post" novalidate>
+                        <input type="email" id="email" name="EMAIL"/>
+                        <label for="email">email address</label>
+                        <button id="button" type="submit" name="subscribe">Submit</button>
+                    </form>
+                </div>
+                <div id="response" class="response" style="display:none"></div>
+                <div class="form-disclaimer">
+                    Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
+                </div>
+            </form-container>
+
             <div w3-include-html="./waves.html"></div>
 
             <div w3-include-html="./menu.html"></div>
-
-            <div w3-include-html="./subform.html"></div>
 
             <head-container>
                 <sidebar></sidebar>
@@ -123,6 +141,9 @@
             </div>
             <div w3-include-html="./footer.html"></div>
         </page-container>
+
+        <script type= "text/javascript" src="./mcsub-min.js"></script>
+        <script type= "text/javascript" src="./mcsub-form.js"></script>
 
         <script>
             w3IncludeHTML();
