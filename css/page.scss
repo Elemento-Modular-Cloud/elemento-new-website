@@ -32,13 +32,15 @@
 }
 
 
-img {
+.content img {
     width: 100%;
     height: 30vh;
     margin: auto;
     margin-top: 3vh;
     margin-bottom: 3vh;
     text-align: center;
+    -webkit-filter: drop-shadow(2px 0px 12px var(--dark-grey));
+    filter: drop-shadow(2px 0px 12px var(--dark-grey));
 }
 
 .team {
