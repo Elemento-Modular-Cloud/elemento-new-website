@@ -221,12 +221,10 @@ logo-container info {
 .footer {
     color: var(--light-grey);
     z-index: 10;
-    position: absolute;
-    left: 0;
-    top: 100%;
+    padding-top: 3vh;
+    position: relative;
     width: 100%;
     text-align: center;
-    transform: translateY(-130%);
     font-size: 1vh;
     font-family: 'Muli', sans-serif;
     padding-bottom: .5vh;
