@@ -80,6 +80,8 @@
     max-width: 100%;
     margin: auto;
     height: auto;
+    -webkit-filter: drop-shadow(2px 0px 12px var(--dark-grey));
+    filter: drop-shadow(2px 0px 12px var(--dark-grey));
 }
 
 .team .person .text {
@@ -223,4 +225,6 @@
 
 .contact img {
     width: 100%;
+    -webkit-filter: drop-shadow(2px 0px 12px var(--dark-grey));
+    filter: drop-shadow(2px 0px 12px var(--dark-grey));
 }
