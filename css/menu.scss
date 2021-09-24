@@ -7,6 +7,12 @@ menu {
     z-index: 200;
 }
 
+@media (orientation: portrait){
+    menu {
+        display: none;
+    }
+}
+
 menu .item {
     display: table-cell;
     text-align: center;

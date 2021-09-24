@@ -21,7 +21,7 @@
   background: url('../img/waves/wavewhite4x.png') repeat-x;
   background-size: 100vw 6vh;
   position: absolute;
-  top: 96vh;
+  top: calc(96vh - 6px);
   width: 300vw;
   height: 6vh;
   animation: wave 73s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;

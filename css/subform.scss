@@ -32,16 +32,29 @@ form-container {
 .form-title {
     font-weight: bold;
     font-size: 2.2vh;
+    line-height: 2.2vh;
 }
 
 .form-description {
     font-size: 1.8vh;
+    line-height: 1.8vh;
     text-align: left;
 }
 
 .form-disclaimer {
     font-size: 1.4vh;
+    line-height: 1.4vh;
     color: var(--lighter-grey);
+}
+
+@media (orientation: portrait){
+    form-container {
+        top: 57%;
+        left: 5%;
+        width: 90%;
+        transform: none;
+        z-index: 11;
+    }
 }
 
 a {
