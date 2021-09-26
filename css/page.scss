@@ -79,7 +79,7 @@
     width: 12vh !important;
     max-width: 100%;
     margin: auto;
-    height: auto;
+    height: 12vh;
     -webkit-filter: drop-shadow(0 0px 12px var(--dark-grey));
     filter: drop-shadow(0 0px 12px var(--dark-grey));
 }
@@ -143,8 +143,8 @@
 }
 
 .product img {
-    height: auto;
     width: 50%;
+    height: auto;
     opacity: 1;
     transform: translate3d(0,0,0);
     transition: opacity .3s ease-in-out, transform .3s ease-in-out, filter .3s ease-in-out;
@@ -165,6 +165,7 @@
 
 .product:first-of-type img {
     width: 50%;
+    height: auto;
 }
 
 .product:first-of-type img:nth-of-type(1){
@@ -213,12 +214,6 @@
     }
 }
 
-// @media screen {
-//     .product img:nth-of-type(even) {
-//         opacity: .5;
-//     }
-// }
-
 .product:hover img:nth-of-type(odd) {
     transform: translate3d(0,-6px,0) scale(1.02);
     -webkit-filter: drop-shadow(0 12px 12px var(--dark-grey));
@@ -244,7 +239,6 @@
     font-size: 3vh;
     text-transform: uppercase;
     pointer-events: none;
-    // text-shadow: 0px 0px 8px var(--dark-grey);
 }
 
 .contacts {
@@ -254,7 +248,6 @@
     gap: 0;
     width: 100%;
     margin: auto;
-    // grid-auto-rows: minmax(100px, auto);
 }
 
 .contacts .contact {
@@ -267,7 +260,8 @@
 }
 
 .contact img {
-    width: 100%;
+    width: calc(65vw / 4);
+    height: calc(65vw / 4);
     -webkit-filter: drop-shadow(0 6px 12px var(--dark-grey));
     filter: drop-shadow(0 6px 12px var(--dark-grey));
     transform: translate3d(0,0,0) scale(1);
