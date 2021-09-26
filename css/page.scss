@@ -144,7 +144,7 @@
 
 .product img {
     width: 50%;
-    height: auto;
+    height: calc(100vw * .7 * .5 / 3);
     opacity: 1;
     transform: translate3d(0,0,0);
     transition: opacity .3s ease-in-out, transform .3s ease-in-out, filter .3s ease-in-out;
@@ -161,11 +161,6 @@
     position: absolute;
     top: 0;
     left: 25%;
-}
-
-.product:first-of-type img {
-    width: 50%;
-    height: auto;
 }
 
 .product:first-of-type img:nth-of-type(1){
