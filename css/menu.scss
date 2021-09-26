@@ -7,7 +7,7 @@ menu {
     z-index: 200;
 }
 
-@media (orientation: portrait), only screen and (hover: none) and (pointer: coarse) {
+@media (orientation: portrait), only screen and (pointer: coarse) {
     menu {
         display: none;
     }

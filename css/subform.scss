@@ -47,7 +47,7 @@ form-container {
     color: var(--lighter-grey);
 }
 
-@media (orientation: portrait), only screen and (hover: none) and (pointer: coarse) {
+@media (orientation: portrait), only screen and (pointer: coarse) {
     form-container {
         top: 57%;
         left: 5%;

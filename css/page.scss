@@ -54,7 +54,7 @@
     }
 }
 
-@media (orientation: portrait), only screen and (hover: none) and (pointer: coarse) {
+@media (orientation: portrait), only screen and (pointer: coarse) {
     .team {
         grid-template-columns: repeat(1, 1fr);
         // padding-bottom: 10vh;
@@ -95,7 +95,7 @@
     }
 }
 
-@media (orientation: portrait), only screen and (hover: none) and (pointer: coarse) {
+@media (orientation: portrait), only screen and (pointer: coarse) {
     .team .person .text {
         min-width: 40vw;
     }
@@ -122,7 +122,7 @@
     }
 }
 
-@media (orientation: portrait), only screen and (hover: none) and (pointer: coarse) {
+@media (orientation: portrait), only screen and (pointer: coarse) {
     .products {
         grid-template-columns: repeat(1, 1fr);
         padding-bottom: 10vh;
@@ -207,6 +207,18 @@
     opacity: 0;
 }
 
+@media (pointer: coarse) {
+    .product img:nth-of-type(even) {
+        opacity: 0;
+    }
+}
+
+// @media screen {
+//     .product img:nth-of-type(even) {
+//         opacity: .5;
+//     }
+// }
+
 .product:hover img:nth-of-type(odd) {
     transform: translate3d(0,-6px,0) scale(1.02);
     -webkit-filter: drop-shadow(0 12px 12px var(--dark-grey));
@@ -239,7 +251,7 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 3%;
+    gap: 0;
     width: 100%;
     margin: auto;
     // grid-auto-rows: minmax(100px, auto);
@@ -247,6 +259,7 @@
 
 .contacts .contact {
     display: flex;
+    width: calc(65vw / 4);
     align-items: center;
     justify-content: center;
     text-align: center;
