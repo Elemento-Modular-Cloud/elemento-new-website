@@ -20,7 +20,6 @@
         <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" as="script">
         <link rel="preload" href="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js" as="script">
         <link rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgph7FQBaruGpqiMz1_rIyRvxPbFu8V84&amp;sensor=false" as="script">
-        <link rel="preload" href="https://www.w3schools.com/lib/w3data.js" as="script">
 
         <link rel="preload" href="./img/schemas/grid.svg" as="image">
 
@@ -267,7 +266,13 @@
         </map-container>
 
         <link async rel="stylesheet" type="text/css" href="./css/waves.scss"/>
-        <div w3-include-html="./waves.html"></div>
+        <div class="ocean">
+            <div class="overflow-hider">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+        </div>
 
         <link async rel="stylesheet" type="text/css" href="./css/subform.scss"/>
         <form-container>
@@ -292,9 +297,5 @@
 
         <script async type= "text/javascript" src="./mcsub-min.js"></script>
         <script async type= "text/javascript" src="./mcsub-form.js"></script>
-        <script async type= "text/javascript" src="https://www.w3schools.com/lib/w3data.js"></script>
-        <script>
-            w3IncludeHTML();
-        </script>
     </body>
 </html>
