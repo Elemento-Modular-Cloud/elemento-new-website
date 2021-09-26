@@ -143,7 +143,7 @@ button {
     position: absolute;
     right: 0;
     padding: 0;
-    width: 100px;
+    width: 30%;
     height: 100%;
     border: 0;
     border-radius: 0 4px 4px 0;
@@ -154,7 +154,9 @@ button {
     outline: none;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.35s ease-out, width 0.5s ease-out, background 0.25s ease-out, border-radius 0.25s ease-out;
+    transition: opacity 0.35s ease-out, transform 0.5s ease-out, background 0.25s ease-out, border-radius 0.25s ease-out;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
 .min-label {
@@ -166,6 +168,7 @@ button.is-active {
     opacity: 1;
     background: var(--light-orange);
     color: var(--dark-grey);
+    transform: scaleX(1);
 }
   
 button.is-done {
