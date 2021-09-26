@@ -9,6 +9,8 @@
         <meta name="author" content="Gabriele Gaetano Fronzé">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" type="text/css" href="./css/home.scss"/>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153798322-1"></script>
         <script>
@@ -18,25 +20,22 @@
 
             gtag('config', 'UA-153798322-1');
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
-        <link async rel="stylesheet" type="text/css" href="./css/home.scss"/>
-        <link async rel="stylesheet" type="text/css" href="./css/menu.scss"/>
-        <link async rel="stylesheet" type="text/css" href="./css/subform.scss"/>
-        <link async rel="stylesheet" type="text/css" href="./css/waves.scss"/>
-
         <shadow></shadow>
         <div class="index">
+            <link rel="stylesheet" type="text/css" href="./css/waves.scss"/>
             <map-container>
-                <script async type= "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-                <script async type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
-                <script async type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgph7FQBaruGpqiMz1_rIyRvxPbFu8V84&amp;sensor=false"></script>
-                <script async type= "text/javascript" src="./mapbg.js"></script>
+                <script type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
+                <script type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgph7FQBaruGpqiMz1_rIyRvxPbFu8V84&amp;sensor=false"></script>
+                <script type= "text/javascript" src="./mapbg.js"></script>
                 <map id="map"></map>
                 <map-shadow></map-shadow>
             </map-container>
 
+            <link rel="stylesheet" type="text/css" href="./css/subform.scss"/>
             <form-container>
                 <div class="form-title">
                     Getting curious? Register now!
@@ -57,10 +56,11 @@
                 </div>
             </form-container>
 
-            <script async type= "text/javascript" src="https://www.w3schools.com/lib/w3data.js"></script>
+            <script type= "text/javascript" src="https://www.w3schools.com/lib/w3data.js"></script>
 
             <div w3-include-html="./waves.html"></div>
 
+            <link rel="stylesheet" type="text/css" href="./css/menu.scss"/>
             <div w3-include-html="./menu.html"></div>
 
             <head-container>
@@ -88,8 +88,7 @@
             </head-container>
         </div>
 
-        <link async rel="stylesheet" type="text/css" href="./css/page.scss"/>
-
+        <link rel="stylesheet" type="text/css" href="./css/page.scss"/>
         <page-container>
             <div class="page">
                 <div class="content" id="Mission">
