@@ -151,7 +151,7 @@ logo-container info {
     width: 100%;
 }
 
-@media (orientation: portrait){
+@media (orientation: portrait), only screen and (hover: none) and (pointer: coarse) {
     map-container {
         left: 0;
         width: 100%;
@@ -241,7 +241,7 @@ logo-container info {
     padding-top: 2%;
 }
 
-@media (orientation: portrait){
+@media (orientation: portrait), only screen and (hover: none) and (pointer: coarse) {
     .abstract-wrapper {
         width: 90%;
         left: 0;
