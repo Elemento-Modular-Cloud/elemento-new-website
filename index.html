@@ -46,25 +46,17 @@
     </head>
 
     <body>
-        <map-container>
-            <script async type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
-            <script async type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgph7FQBaruGpqiMz1_rIyRvxPbFu8V84&amp;callback=initMap"></script>
-            <script async type= "text/javascript" src="./mapbg.js"></script>
-            <map id="map"></map>
-            <map-shadow></map-shadow>
-        </map-container>
-        <shadow></shadow>
-
-        <link async rel="stylesheet" type="text/css" href="./css/waves.scss"/>
-        <div class="ocean">
-            <div class="overflow-hider">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-            </div>
-        </div>
 
         <div class="index">
+            <map-container>
+                <script async type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
+                <script async type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgph7FQBaruGpqiMz1_rIyRvxPbFu8V84&amp;callback=initMap"></script>
+                <script async type= "text/javascript" src="./mapbg.js"></script>
+                <map id="map"></map>
+                <map-shadow></map-shadow>
+            </map-container>
+            <shadow></shadow>
+            
             <link async rel="stylesheet" type="text/css" href="./css/menu.scss"/>
             <menu>
                 <a href="#Mission"><div class="item">Mission</div></a>
@@ -96,28 +88,37 @@
                     </info>
                 </logo-container>
             </head-container>
-        </div>
 
-        <link async rel="stylesheet" type="text/css" href="./css/subform.scss"/>
-        <form-container>
-            <div class="form-title">
-                Getting curious? Register now!
+            <link async rel="stylesheet" type="text/css" href="./css/waves.scss"/>
+            <div class="ocean">
+                <div class="overflow-hider">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
             </div>
-            <div class="form-description">
-                You'll receive updates, blog links and useful information about Elemento's progress.
-            </div>
-            <div id="mailchimpform" class="subscribe">
-                <form action="https://brixtol.us5.list-manage.com/subscribe/post" novalidate>
-                    <input type="email" id="email" name="EMAIL"/>
-                    <label form="email" id="email-label">Insert email address</label>
-                    <button id="button" type="submit" name="subscribe">Submit</button>
-                </form>
-            </div>
-            <div id="response" class="response" style="display:none"></div>
-            <div class="form-disclaimer">
-                Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
-            </div>
-        </form-container>
+
+            <link async rel="stylesheet" type="text/css" href="./css/subform.scss"/>
+            <form-container>
+                <div class="form-title">
+                    Getting curious? Register now!
+                </div>
+                <div class="form-description">
+                    You'll receive updates, blog links and useful information about Elemento's progress.
+                </div>
+                <div id="mailchimpform" class="subscribe">
+                    <form action="https://brixtol.us5.list-manage.com/subscribe/post" novalidate>
+                        <input type="email" id="email" name="EMAIL"/>
+                        <label form="email" id="email-label">Insert email address</label>
+                        <button id="button" type="submit" name="subscribe">Submit</button>
+                    </form>
+                </div>
+                <div id="response" class="response" style="display:none"></div>
+                <div class="form-disclaimer">
+                    Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
+                </div>
+            </form-container>
+        </div>
 
         <link async rel="stylesheet" type="text/css" href="./css/page.scss"/>
         <page-container>
