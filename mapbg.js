@@ -175,7 +175,7 @@ const styles = [
 var lat = 44.384477;
 var long = 7.542671;
 
-function init() {
+function initMap() {
     console.log(lat, long)
 
     var mapOptions = {
@@ -204,6 +204,8 @@ function init() {
     console.log("Map created")
 }
 
+
+
 $(document).ready(function(){
     if (typeof geoip2 !== 'undefined'){
         geoip2.city(
@@ -213,14 +215,14 @@ $(document).ready(function(){
             lat = geoIPResponse.location.latitude;
             long = geoIPResponse.location.longitude;
             console.log(lat, long);
-            init();
+            initMap();
         }, 
         function(geoIPResponse) {
             console.log("Geolocation failed. Defaulting.");
-            init();
+            initMap();
         });
     } else {
         console.log("Geoip not found. Defaulting.");
-        init();
+        initMap();
     }
   });
