@@ -80,6 +80,7 @@
     max-width: 100%;
     margin: auto;
     height: 12vh;
+    transform: translate3d(0,0,0);
     -webkit-filter: drop-shadow(0 0px 12px var(--dark-grey));
     filter: drop-shadow(0 0px 12px var(--dark-grey));
 }
