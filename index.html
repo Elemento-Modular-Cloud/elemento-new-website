@@ -1,5 +1,7 @@
 <html>
-    <head>        
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/fonts.scss"/>
+
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Muli&display=swap" as="style">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap">
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" as="style">
@@ -25,7 +27,7 @@
         <meta name="author" content="Gabriele Gaetano Fronzé">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link async rel="stylesheet" type="text/css" href="./css/home-min.scss"/>
+        <link async rel="stylesheet" type="text/css" href="./css/home.scss"/>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153798322-1"></script>
@@ -40,7 +42,24 @@
     </head>
 
     <body>
+        <map-container>
+            <script async type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
+            <script async type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgph7FQBaruGpqiMz1_rIyRvxPbFu8V84&amp;callback=initMap"></script>
+            <script async type= "text/javascript" src="./mapbg.js"></script>
+            <map id="map"></map>
+            <map-shadow></map-shadow>
+        </map-container>
         <shadow></shadow>
+
+        <link async rel="stylesheet" type="text/css" href="./css/waves.scss"/>
+        <div class="ocean">
+            <div class="overflow-hider">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+        </div>
+
         <div class="index">
             <link async rel="stylesheet" type="text/css" href="./css/menu.scss"/>
             <menu>
@@ -75,7 +94,7 @@
             </head-container>
         </div>
 
-        <link async rel="stylesheet" type="text/css" href="./css/page-min.scss"/>
+        <link async rel="stylesheet" type="text/css" href="./css/page.scss"/>
         <page-container>
             <div class="page">
                 <div class="content" id="Mission">
@@ -248,24 +267,7 @@
             </div>
         </page-container>
 
-        <map-container>
-            <script async type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
-            <script async type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgph7FQBaruGpqiMz1_rIyRvxPbFu8V84&amp;sensor=false"></script>
-            <script async type= "text/javascript" src="./mapbg.js"></script>
-            <map id="map"></map>
-            <map-shadow></map-shadow>
-        </map-container>
-
-        <link async rel="stylesheet" type="text/css" href="./css/-min.scss"/>
-        <div class="ocean">
-            <div class="overflow-hider">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-            </div>
-        </div>
-
-        <link async rel="stylesheet" type="text/css" href="./css/subform-min.scss"/>
+        <link async rel="stylesheet" type="text/css" href="./css/subform.scss"/>
         <form-container>
             <div class="form-title">
                 Getting curious? Register now!
