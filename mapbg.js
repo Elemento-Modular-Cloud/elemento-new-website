@@ -172,11 +172,7 @@ const styles = [
     }
 ]
 
-var lat = 44.384477;
-var long = 7.542671;
-
-function initMap() {
-    console.log(lat, long)
+function initMap(lat=44.384477, long=7.542671) {
 
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
@@ -195,13 +191,9 @@ function initMap() {
     // Get the HTML DOM element that will contain your map 
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
-
-    console.log("Div found")
-
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
 
-    console.log("Map created")
 }
 
 
@@ -210,19 +202,12 @@ $(document).ready(function(){
     if (typeof geoip2 !== 'undefined'){
         geoip2.city(
         function(geoIPResponse) {
-            console.log("Geolocation success.");
-            console.log(geoIPResponse);
-            lat = geoIPResponse.location.latitude;
-            long = geoIPResponse.location.longitude;
-            console.log(lat, long);
-            initMap();
+            initMap(geoIPResponse.location.latitude, geoIPResponse.location.longitude);
         }, 
         function(geoIPResponse) {
-            console.log("Geolocation failed. Defaulting.");
-            initMap();
+            initMap(44.384477, 7.542671);
         });
     } else {
-        console.log("Geoip not found. Defaulting.");
-        initMap();
+        initMap(44.384477, 7.542671);
     }
   });
