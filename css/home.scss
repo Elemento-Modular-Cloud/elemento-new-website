@@ -40,12 +40,19 @@ head-container {
     z-index: 12;
 }
 
-map-container {
+map-container, particles-container {
     position: absolute;
     top: 0;
     left: calc(var(--logo-container-width) / 2);
     height: 100%;
     width: calc(100% - var(--logo-container-width) / 2);
+}
+
+particles-container {
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
 }
 
 map {

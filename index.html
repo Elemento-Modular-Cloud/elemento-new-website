@@ -68,7 +68,7 @@
 
             <shadow></shadow>
             <sidebar></sidebar>
-            
+
             <head-container>
                 <logo-container>
                     <logo></logo>
@@ -99,6 +99,7 @@
                 <map id="map"></map>
                 <map-shadow></map-shadow>
             </map-container>
+            <particles-container id="particles-js"/>
 
             <link defer rel="stylesheet" type="text/css" href="./css/waves.scss"/>
             <div class="ocean">
@@ -306,5 +307,11 @@
 
         <script defer type= "text/javascript" src="./mcsub-min.js"></script>
         <script defer type= "text/javascript" src="./mcsub-form.js"></script>
+        <script src="./particles.js"></script>
+        <script>
+            particlesJS.load('particles-js', './particles.json', function() {
+              console.log('callback - particles.js config loaded');
+            });
+        </script>
     </body>
 </html>
