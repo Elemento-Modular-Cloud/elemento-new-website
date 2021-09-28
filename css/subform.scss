@@ -20,6 +20,19 @@ form-container {
     border-radius: 4px;
     -webkit-box-shadow: 0 0 20px 0 var(--dark-grey); 
     box-shadow: 0 0 20px 0 var(--dark-grey);
+    opacity: 0;
+    animation: fade-in .5s .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .form-title, .form-description, .form-disclaimer, .response {

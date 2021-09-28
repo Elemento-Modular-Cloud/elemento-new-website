@@ -38,6 +38,9 @@ head-container {
     width: 70%;
     height: 100%;
     z-index: 12;
+    opacity: 0;
+    animation: fade-in .5s .3s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 map-container {
@@ -46,6 +49,28 @@ map-container {
     left: calc(var(--logo-container-width) / 2);
     height: 100%;
     width: calc(100% - var(--logo-container-width) / 2);
+    background-color: var(--light-orange);
+}
+
+map-fader {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    opacity: 0;
+    animation: fade-in .8s 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 map {
