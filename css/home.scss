@@ -49,7 +49,7 @@ map-container {
     left: calc(var(--logo-container-width) / 2);
     height: 100%;
     width: calc(100% - var(--logo-container-width) / 2);
-    background-color: var(--light-orange);
+    background-color: var(--dark-grey);
 }
 
 map-fader {
@@ -59,6 +59,9 @@ map-fader {
     height: 110%;
     width: 100%;
     opacity: 0;
+}
+
+.enable-fade {
     animation: fade-in .8s 1.5s ease-in-out;
     animation-fill-mode: forwards;
 }
