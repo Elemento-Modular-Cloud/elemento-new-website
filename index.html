@@ -105,8 +105,11 @@
             <div class="ocean">
                 <div class="overflow-hider">
                     <div class="wave"></div>
+                    <div class="wave hide-wave"></div>
                     <div class="wave"></div>
+                    <div class="wave hide-wave"></div>
                     <div class="wave"></div>
+                    <div class="wave hide-wave"></div>
                 </div>
             </div>
 
@@ -130,9 +133,199 @@
                     Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
                 </div>
             </form-container>
+
+            <link rel="stylesheet" type="text/css" href="./css/switch.scss"/>
+            <div class="switch-container">
+                <div class='toggle' id='switch'>
+                    <div class='toggle-button'></div>
+                </div>
+            </div>
         </div>
 
         <link defer rel="stylesheet" type="text/css" href="./css/page.scss"/>
+        <link defer rel="stylesheet" type="text/css" href="./css/modeselector.scss"/>
+        <page-container>
+            <div class="page">
+                <div class="ms-wrapper">
+                    <div class="ms-grid">
+                        <div class="ms-grid-item">
+                            <div class="content" id="Mission">
+                                <h1>Mission</h1>
+                                <text>
+                                    At Elemento we create a plug and play Cloud solution made of our software, installed on our standard hardware and supported by awesome support plans.
+                                    
+                                    An user can run Windows, Linux and Macos workloads on a complete and refined interface either as servers or interactively, and logging into its resources from anywhere, using a smartphone, a tablet, another computer or an Elemento terminal.
+                                </text>
+                                <img loading="lazy" src="./img/schemas/scale.svg"/>
+                                <text>
+                                    At any time, for any reason, scaling an Elemento Cloud deployment is as easy as adding new building blocks: our software and our experts do the rest, in less than 5 minutes from box to operation.
+            
+                                    Elemento Cloud solutions are like no other. Each customer can tailor its Elemento infrastructure depending on what he prefers.
+                                </text>
+                                <img loading="lazy" src="./img/schemas/grid.svg"/>
+                                <text>
+                                    Elemento allows one to create a private Cloud much easier than any other solution, but Elemento can be used as a public Cloud provider.
+                                    In fact Elemento customers can opt for sharing their unused resources, enabling compute power cross-rental and acting together as a neutral Cloud provider.
+            
+                                    Elemento is the only solution capable of providing a seamless experience between private, public and hybrid deployments.
+                                </text>
+                            </div>
+                        </div>
+                        <div class="ms-grid-item">
+                            Secondo
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="content" id="Products">
+                    <h1>Products</h1>
+                    <div class="products">
+                        <div class="product">
+                            <div class="overlap">
+                                <img loading="lazy" src="./img/schemas/cubeblack.svg"/>
+                                <img loading="lazy" src=""/>
+                                <img loading="lazy" src="./img/schemas/cubepurple.svg"/>
+                                <img loading="lazy" src="./img/schemas/cubeblack.svg"/>
+                                <img loading="lazy" src="./img/schemas/cubeblue.svg"/>
+                                <img loading="lazy" src="./img/schemas/cubeblack.svg"/>
+                                <div class="name">Hardware</div>
+                                <text>Pre built hardware to satisfy your needs, decoupling computing power and storage to ensure total control on your data.</text>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="overlap">
+                                <img loading="lazy" src="./img/schemas/cubeyellow.svg"/>
+                                <img loading="lazy" src="./img/schemas/cubeblack.svg"/>
+                                <div class="name">Software</div>
+                                <text>ElementOS, our custom Linux-based OS which enables plug&play functionality with no effort and comes pre-installed on our hardware.</text>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="overlap">
+                                <img loading="lazy" src="./img/schemas/cubeaqua.svg"/>
+                                <img loading="lazy" src="./img/schemas/cubeblack.svg"/>
+                                <div class="name">Management</div>
+                                <text>Our Sysadmins and Mechanics ready to serve your needs and act when something breaks.</text>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+            <div class="page">
+                <div class="content" id="Team">
+                    <h1>Team</h1>
+                    <text>
+                        Our team is the perfect blend of technical, commercial and business knowledge.
+                        <div class="team">
+                            <div class="person">
+                                <div class="picture">
+                                    <img loading="lazy" src="./img/gabriele.png"/>
+                                </div>
+                                <div class="text">
+                                    Gabriele Gaetano Fronzé
+                                    CEO
+                                    <div class="details">
+                                        PhD in Physics (🇮🇹 & 🇫🇷)
+
+                                        >9 years software developer
+                                        >12 years virtualization expert
+                                        >15 years hardware expert
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person">
+                                <div class="picture">
+                                    <img loading="lazy" src="./img/federica.png"/>
+                                </div>
+                                <div class="text">
+                                    Federica Legger
+                                    CSA
+                                    <div class="details">
+                                        PhD in Physics (🇨🇭)
+
+                                        >15 years software developer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person">
+                                <div class="picture">
+                                    <img loading="lazy" src="./img/user.png"/>
+                                </div>
+                                <div class="text">
+                                    Undisclosed
+                                    CMO
+                                    <div class="details">
+                                        MSc in marketing
+
+                                        >9 years copywriting
+                                        >5 years website development
+                                        >3 years head of marketing
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person">
+                                <div class="picture">
+                                    <img loading="lazy" src="./img/user.png"/>
+                                </div>
+                                <div class="text">
+                                    Undisclosed
+                                    CSO
+                                    <div class="details">
+                                        >25 years sales manager
+                                        >20 years product manager
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </text>
+                </div>
+                <div class="content" id="Contacts">
+                    <h1>Contacts</h1>
+                    <div class="contacts">
+                        <div class="contact">
+                            <a href="mailto:info&#64;elemento.cloud">
+                                <img loading="lazy" src="./img/icons/email.svg"/>
+                            </a>
+                        </div>
+                        <div class="contact">
+                            <a href="https://www.linkedin.com/company/elemento-modular-cloud/?viewAsMember=true">
+                                <img loading="lazy" src="./img/icons/linkedin.svg"/>
+                            </a>
+                        </div>
+                        <div class="contact">
+                            <a href="https://github.com/Elemento-Modular-Cloud">
+                                <img loading="lazy" src="./img/icons/github.svg"/>
+                            </a>
+                        </div>
+                        <div class="contact">
+                            <a href="http://eepurl.com/hIMay9">
+                                <img loading="lazy" src="./img/icons/newsletter.svg"/>
+                            </a>
+                        </div>
+                        <div class="contact">
+                            Email
+                        </div>
+                        <div class="contact">
+                            Linkedin
+                        </div>
+                        <div class="contact">
+                            Github
+                        </div>
+                        <div class="contact">
+                            Newsletter
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2021 Elemento Srl. All rights reserved.
+                VAT 03959360045 | Via Antonio Bassignano 34b- 12100 - Cuneo (CN) - Italy
+            </div>
+        </page-container>   
+
+        <!-- <link defer rel="stylesheet" type="text/css" href="./css/page.scss"/>
         <page-container>
             <div class="page">
                 <div class="content" id="Mission">
@@ -298,14 +491,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer">
-                Copyright © 2021 Elemento Srl. All rights reserved.
-                VAT 03959360045 | Via Antonio Bassignano 34b- 12100 - Cuneo (CN) - Italy
-            </div>
-        </page-container>
+            </div> -->
+            
+        <!-- </page-container> -->
 
         <script defer type= "text/javascript" src="./mcsub-min.js"></script>
         <script defer type= "text/javascript" src="./mcsub-form.js"></script>
+        <script defer type= "text/javascript" src="./switch.js"></script>
     </body>
 </html>

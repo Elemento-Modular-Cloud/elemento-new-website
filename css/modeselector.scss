@@ -1,0 +1,46 @@
+.ms-wrapper {
+    position: relative;
+    height: fit-content;
+    // min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.ms-grid {
+    position: relative;
+    display: grid;
+    height: fit-content;
+    min-height: 100vh;
+    width: 200%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    // grid-auto-rows: minmax(100vh, fit-content);
+    // background-color: turquoise;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.ms-grid-item {
+    grid-row: 1;
+    width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.ms-grid-item:first-of-type {
+    grid-column: 1;
+}
+
+.ms-grid-item:nth-of-type(2) {
+    grid-column: 2;
+    background: var(--dark-grey);
+    color: var(--light-orange);
+}
+
+.ms-grid-toggle {
+    left: -100%;
+}

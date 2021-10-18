@@ -211,4 +211,4 @@ $(document).ready(function(){
         initMap(44.384477, 7.542671);
     }
     mapfader.classList.add("enable-fade")
-  });
+});

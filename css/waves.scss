@@ -31,17 +31,25 @@
   margin-left: 0;
   -webkit-filter: drop-shadow(0 0 20px var(--dark-grey));
   filter: drop-shadow(0 0 20px var(--dark-grey));
+  visibility: visible;
   z-index: 200;
 }
 
-.wave:nth-of-type(2) {
+.wave:nth-of-type(even) {
+  background: url('../img/waves/wavedark4x.png') repeat-x;
+  background-size: 100vw 6vh;
+  -webkit-filter: drop-shadow(0 0 20px var(--lighter-grey));
+  filter: drop-shadow(0 0 20px var(--lighter-grey));
+}
+
+.wave:nth-of-type(3), .wave:nth-of-type(4) {
   animation: wave 51s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, swell 4s ease -1.25s infinite;
   opacity: .4;
   left: 50%;
   margin-left: -13vw;
 }
 
-.wave:nth-of-type(3) {
+.wave:nth-of-type(5), .wave:nth-of-type(6) {
     animation: wave 27s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -2s infinite, swell 7s ease -5.25s infinite;
     opacity: .6;
     left: 50%;
@@ -64,4 +72,8 @@
   50% {
     transform: translate3d(0,8px,0);
   }
+}
+
+.hide-wave {
+  opacity: 0 !important;
 }

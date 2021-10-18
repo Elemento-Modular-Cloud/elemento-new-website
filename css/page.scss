@@ -5,22 +5,24 @@
     height: fit-content;
 }
 
-.page .content {
+.content {
     position: relative;
     top: 0;
     left: 15%;
     width: 70%;
     font-family: 'Muli', sans-serif;
+    overflow-y: visible;
+    height: fit-content;
 }
 
-.page .content h1 {
+.content h1 {
     font-family: 'heroregular', sans-serif;
     text-transform: uppercase;
     font-size: 4vh;
     text-align: center;
 }
 
-.page .content text {
+.content text {
     font-family: 'Muli', sans-serif;
     font-size: 2vh;
     text-align: left;
