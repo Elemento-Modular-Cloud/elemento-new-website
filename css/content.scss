@@ -1,0 +1,73 @@
+content-wrapper {
+    position: relative;
+    display: grid;
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    left: 0;
+    overflow: hidden;
+    align-items: center;
+    padding: 0;
+    padding-top: 5vmin;
+    padding-bottom: 5vmin;
+}
+
+content-wrapper img, content-wrapper container {
+    grid-row: 1;
+    width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding: 0;
+}
+
+content-wrapper:nth-of-type(odd) img, content-wrapper:nth-of-type(even) container {
+    grid-column: 1;
+    text-align: right;
+}
+
+content-wrapper:nth-of-type(even) img, content-wrapper:nth-of-type(odd) container {
+    grid-column: 2;
+    text-align: left;
+}
+
+content-wrapper container name,
+content-wrapper container tagline,
+content-wrapper container ctext,
+content-wrapper container a {
+    display: inline-block;
+    width: 100%;
+}
+
+content-wrapper container name {
+    font-family: 'heroregular', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5vmin;
+    color: var(--light-orange);
+    padding: 0;
+}
+
+content-wrapper container tagline {
+    font-family: 'heroregular', sans-serif;
+    font-size: 4vmin;
+    color: white;
+    padding: 0;
+    padding-top: 3.5vmin;
+    padding-bottom: 3.5vmin;
+}
+
+content-wrapper container ctext,
+content-wrapper container a {
+    font-family: 'Muli', sans-serif;
+    font-size: 2vmin;
+    color: inherit;
+    white-space: pre-line;
+}
+
+content-wrapper container a {
+    padding: 0;
+    padding-top: 4vmin;
+    color: var(--lighter-grey);
+}
