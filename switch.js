@@ -1,9 +1,9 @@
 const ms = document.getElementsByClassName("ms-grid");
 const wave = document.getElementsByClassName("wave");
 
-$('.toggle').click(function(e){
-    e.preventDefault(); // The flicker is a codepen thing
-    $(this).toggleClass('toggle-on');
+function toggle(){
+    document.getElementById("switch").classList.toggle('toggle-on');
+
     for (var i = 0; i < ms.length; i++) {
         ms[i].classList.toggle("ms-grid-toggle")
         //Do something
@@ -12,4 +12,14 @@ $('.toggle').click(function(e){
         wave[j].classList.toggle("hide-wave")
         //Do something
     }
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+    toggle()
+
+$('.toggle').click(function(e){
+    e.preventDefault(); // The flicker is a codepen thing
+    toggle();
 });
