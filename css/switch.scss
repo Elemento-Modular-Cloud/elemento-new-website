@@ -1,26 +1,26 @@
 .switch-container {
-    position: fixed;
+    display: table-cell;
+    position: relative;
     z-index: 200;
-    top: 10px;
-    left: 10px;
     width: fit-content;
     height: fit-content;
 }
 
 #switch{
     top: 0%;
-    left: 0%;
-    width: 60px;
-    height: 30px;
+    left: 0;
+    width: 40px;
+    height: 20px;
 }
 
 .toggle{
-    position: absolute;
-    border: 2px solid var(--light-grey);
-    border-radius: 15px;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 10px;
     -webkit-transition: border-color .6s  ease-out;
     transition: border-color .6s  ease-out;
     box-sizing: border-box;
+    box-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
 }
 
 .toggle.toggle-on{
@@ -32,71 +32,53 @@
 .toggle-button{
     position: absolute;
     top: 1px;
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     left: 1px;
     border-radius: 50%;
-    background-color: var(--light-grey);
+    background-color: white;
     cursor: pointer;
     -webkit-transition: all .3s .1s, width .1s, top .1s, bottom .1s;
     transition: all .3s .1s, width .1s, top .1s, bottom .1s;
 }
 
 .toggle-on .toggle-button{
-    left: calc(100% - 25px);
+    left: calc(100% - 15px);
     background-color: var(--light-orange);
     -webkit-transition: all .2s .1s, right .1s;
     transition: all .2s .1s, right .1s;
 }
 
 
-.toggle-text-on{
+.toggle-text-on, .toggle-text-off{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 55px;
     right: 0;
-    line-height: 36px;
+    width: 100px;
+    line-height: 18px;
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-size: 18px;
     font-weight: normal;
     cursor: pointer;
     -webkit-user-select: none; /* Chrome/Safari */    
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
-
-
-    color: rgba(0,0,0,0);
+    text-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
 }
 
 .toggle-on .toggle-text-on{
-    color: #3b6a7d;
-    -webkit-transition: color .3s .15s ;
-    transition: color .3s .15s ;
+    color: var(--light-orange);
 }
 
 .toggle-text-off{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 6px;
-    line-height: 36px;
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    -webkit-user-select: none; /* Chrome/Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
-
-    cursor: pointer;
-
-    color: #444249;
+    color: white;
 }
 
 .toggle-on .toggle-text-off{
-    color: rgba(0,0,0,0);
+    opacity: 0;
 }
 
 /* used for streak effect */

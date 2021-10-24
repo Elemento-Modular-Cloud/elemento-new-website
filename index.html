@@ -58,11 +58,19 @@
 
         <div class="index">            
             <link defer rel="stylesheet" type="text/css" href="./css/menu.scss"/>
+            <link rel="stylesheet" type="text/css" href="./css/switch.scss"/>
             <menu>
                 <a href="#Mission"><div class="item">Mission</div></a>
                 <a href="#Products"><div class="item">Products</div></a>
                 <a href="#Team"><div class="item">Team</div></a>
                 <a href="#Contacts"><div class="item">Contacts</div></a>
+                <div class="switch-container">
+                    <div class='toggle toggle-on' id='switch'>
+                        <div class='toggle-button'></div>
+                        <div  class="toggle-text-on">Light mode</div>
+                        <div  class="toggle-text-off">Dark mode</div>
+                    </div>
+                </div>
             </menu>
 
             <shadow></shadow>
@@ -133,13 +141,13 @@
                     Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
                 </div>
             </form-container>
-
-            <link rel="stylesheet" type="text/css" href="./css/switch.scss"/>
-            <div class="switch-container">
-                <div class='toggle' id='switch'>
+            <!-- <div class="switch-container">
+                <div class='toggle toggle-on' id='switch'>
                     <div class='toggle-button'></div>
+                    <div  class="toggle-text-on">Light mode</div>
+                    <div  class="toggle-text-off">Dark mode</div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <link defer rel="stylesheet" type="text/css" href="./css/page.scss"/>

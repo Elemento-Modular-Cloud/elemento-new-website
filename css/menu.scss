@@ -1,10 +1,13 @@
 menu {
     position: absolute;
     display: table;
-    top: 2%;
-    right: 0;
-    width: fit-content;
+    top: 10px;
+    right: 120px;
+    width: 30%;
+    height: 18px;
     z-index: 200;
+    padding: 0;
+    margin: 0;
 }
 
 @media (orientation: portrait), only screen and (pointer: coarse) {
@@ -17,20 +20,21 @@ menu .item {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    font-family: 'herobold', sans-serif;
-    font-size: 2vh;
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    line-height: 18px;
     color: white;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     text-overflow: clip;
-    width: 10vw;
+    width: auto;
     padding: 0;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 2vw;
     text-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
-    -webkit-text-stroke-width: 0.05vh;
-    -webkit-text-stroke-color: var(--dark-grey);
-    -webkit-text-fill-color: white;
     transition: color .2s ease-in-out, -webkit-text-fill-color .2s ease-in-out;
+}
+
+menu .item:last-of-type {
+    padding-right: 0 !important;
 }
 
 menu .item:hover {
