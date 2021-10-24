@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 424.71585 278.87005">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #FFD464;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #FFA601;
+      }
+
+      .cls-3 {
+        fill: #bd232b;
+      }
+
+      .cls-4 {
+        fill: #d76768;
+      }
+
+      .cls-5 {
+        fill: #55b54e;
+      }
+
+      .cls-6 {
+        fill: #9bcb6d;
+      }
+
+      .cls-7, .cls-8 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 8;
+        stroke-width: 1.5px;
+      }
+
+      .cls-7 {
+        stroke: url(#Sfumatura_senza_nome_25);
+      }
+
+      .cls-8 {
+        stroke: url(#Sfumatura_senza_nome_25-2);
+      }
+    </style>
+    <linearGradient id="Sfumatura_senza_nome_25" data-name="Sfumatura senza nome 25" x1="255.70517" y1="224.14284" x2="406.20517" y2="224.14284" gradientUnits="userSpaceOnUse">
+      <stop offset="0.57459" stop-color="#202835"/>
+      <stop offset="1" stop-color="#202835" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="Sfumatura_senza_nome_25-2" x1="242.28777" y1="229.2455" x2="392.78777" y2="229.2455" xlink:href="#Sfumatura_senza_nome_25"/>
+  </defs>
+  <title>StorageEasy</title>
+  <g id="Livello_1" data-name="Livello 1">
+    <polygon class="cls-1" points="212.358 12.03 315.358 63.391 315.358 188.67 212.358 240.03 212.358 12.03"/>
+    <polygon class="cls-2" points="212.358 12.03 212.358 240.03 110.358 188.67 110.358 63.391 212.358 12.03"/>
+  </g>
+  <g id="Livello_2" data-name="Livello 2">
+    <ellipse cx="249.85792" cy="207.5302" rx="4.5" ry="5.5"/>
+    <path class="cls-3" d="M256.87492,203.66246c-1.7184-.161-3.2993,1.71444-3.5311,4.18889s.97321,4.61088,2.69161,4.77187l-6.72061-.62963c-1.7184-.161-2.9234-2.29742-2.69159-4.77187s1.8127-4.34988,3.5311-4.18889Z"/>
+    <path class="cls-4" d="M256.87492,203.66246c1.71831.161,2.9234,2.29742,2.69161,4.77187s-1.81281,4.34987-3.5311,4.18889-2.9234-2.29743-2.69161-4.77187S255.15652,203.50147,256.87492,203.66246Z"/>
+  </g>
+  <g id="Livello_3" data-name="Livello 3">
+    <ellipse cx="236.44052" cy="212.63286" rx="4.5" ry="5.5"/>
+    <path class="cls-5" d="M243.45752,208.76512c-1.7184-.161-3.2993,1.71444-3.5311,4.18889s.9732,4.61088,2.6916,4.77187l-6.72061-.62963c-1.7184-.161-2.9234-2.29742-2.69159-4.77187s1.8127-4.34988,3.5311-4.18889Z"/>
+    <path class="cls-6" d="M243.45752,208.76512c1.7183.161,2.9234,2.29742,2.6916,4.77187s-1.8128,4.34987-3.5311,4.18889-2.9234-2.29743-2.6916-4.77187S241.73912,208.60413,243.45752,208.76512Z"/>
+    <path class="cls-7" d="M256.45517,208.14284c2.125.3386,6.16544.04264,11.16544,3.51356s5.44551,13.15668,18.83456,17.31184,41.66669,5.75664,61.5,7.619,38.66662,2.709,57.5,3.55556"/>
+    <path class="cls-8" d="M243.03777,213.2455c2.125.3386,6.16543.04264,11.16543,3.51356s5.44551,13.15668,18.83457,17.31183,41.66669,5.75665,61.5,7.61905,38.66661,2.70895,57.5,3.55556"/>
+  </g>
+</svg>
