@@ -43,6 +43,10 @@
     color: var(--dark-orange);
 }
 
+.ms-grid-item:first-of-type feature:hover {
+    background-color: whitesmoke;
+}
+
 .ms-grid-item:nth-of-type(2) {
     grid-column: 2;
     background: var(--dark-grey);
