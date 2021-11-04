@@ -8,7 +8,8 @@
 form-container {
     position: absolute;
     display: table;
-    border-spacing: 4vh;
+    border-spacing: 1.5vh;
+    padding: 1vh;
     border-collapse: separate;
     top: 50%;
     right: 0;
@@ -44,27 +45,27 @@ form-container {
 
 .form-title {
     font-weight: bold;
-    font-size: 2.2vh;
-    line-height: 2.2vh;
+    font-size: 2vmin;
+    line-height: 2vmin;
 }
 
 .form-description {
-    font-size: 1.8vh;
-    line-height: 1.8vh;
+    font-size: 1.6vmin;
+    line-height: 1.6vmin;
     text-align: left;
 }
 
 .form-disclaimer {
-    font-size: 1.4vh;
-    line-height: 1.4vh;
+    font-size: 1.2vmin;
+    line-height: 1.2vmin;
     color: var(--lighter-grey);
 }
 
 @media (orientation: portrait), only screen and (pointer: coarse) {
     form-container {
-        top: 57%;
-        left: 5%;
-        width: 90%;
+        top: 65%;
+        left: 15%;
+        width: 70%;
         transform: none;
         z-index: 11;
     }

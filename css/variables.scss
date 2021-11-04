@@ -4,4 +4,10 @@
     --logo-height: 30vh;
     --menu-accent: var(--dark-accent);
     --font-scale: 1.5;
+}
+
+@media (orientation: landscape){
+  :root{
+    --logo-height: 50vh;
   }
+}

@@ -187,7 +187,7 @@ logo-container info {
     head-container {
         width: 100%;
         height: 70%;
-        top: -7%;
+        // top: -7%;
         z-index: 20;
     }
 
@@ -265,6 +265,14 @@ logo-container info {
 .abstract .tagline {
     color: var(--light-orange);
     padding-top: 2%;
+}
+
+.abstract-wrapper .payoff {
+    color: white;
+    padding-top: 5vmin;
+    font-family: 'herolight', sans-serif;
+    font-size: 4vmin;
+    text-transform: uppercase;
 }
 
 @media (orientation: portrait), only screen and (pointer: coarse) {
