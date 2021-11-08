@@ -78,6 +78,10 @@
     padding: 3%;
 }
 
+.team .align-middle{
+    align-items: center;
+}
+
 .team .person .picture {
     // display: table-cell;
     // width: 40%;
@@ -93,6 +97,11 @@
     transform: translate3d(0,0,0);
     -webkit-filter: drop-shadow(0 0px 12px var(--dark-grey));
     filter: drop-shadow(0 0px 12px var(--dark-grey));
+}
+
+.picture .fill-white {
+    background-color: white;
+    padding: 3px;
 }
 
 .team .person .text {
@@ -116,6 +125,11 @@
 .team .person .text .details {
     text-align: left;
     font-size: 1.5vh;
+}
+
+.team a {
+    text-decoration: none;
+    color: white;
 }
 
 .products {
