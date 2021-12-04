@@ -18,7 +18,8 @@
 }
 
 .wave {
-  background: url('../img/waves/wavewhite4x.png') repeat-x;
+  background-image: image-set("../img/waves/wavewhite4x.webp" type("image/webp"), "../img/waves/wavewhite4x.png" type("image/png"));
+  background-repeat: repeat-x;
   background-size: 100vw 6vh;
   position: absolute;
   top: calc(96vh - 6px);
@@ -36,10 +37,20 @@
 }
 
 .wave:nth-of-type(even) {
-  background: url('../img/waves/wavedark4x.png') repeat-x;
+  background-image: image-set("../img/waves/wavedark4x.webp" type("image/webp"), "../img/waves/wavedark4x.png" type("image/png"));
+  background-repeat: repeat-x;
   background-size: 100vw 6vh;
   -webkit-filter: drop-shadow(0 0 20px var(--lighter-grey));
   filter: drop-shadow(0 0 20px var(--lighter-grey));
+}
+
+@supports not (background-image: image-set("foo.png" type("image/png"))) {
+  .wave {
+    background-image: url("../img/waves/wavewhite4x.png");
+  }
+  .wave:nth-of-type(even) {
+    background-image: url("../img/waves/wavedark4x.png");
+  }
 }
 
 .wave:nth-of-type(3), .wave:nth-of-type(4) {
