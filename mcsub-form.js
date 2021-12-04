@@ -20,7 +20,7 @@ new Mcsub('#mailchimpform', {
         email.addEventListener('click', function() {
             button.classList.add('is-active');
             label.classList.add('min-label')
-        });
+        }, {passive: true});
         this.button.addEventListener('click', function(e){
             console.log(email.value)
             if(validateEmail(email.value)){
@@ -40,7 +40,7 @@ new Mcsub('#mailchimpform', {
                     this.classList.remove('is-invalid');
                 });
             }
-          });
+          }, {passive: true});
     },
     onSubmit(){
         console.log(this.button); // Example
