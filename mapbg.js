@@ -172,7 +172,7 @@ const styles = [
     }
 ]
 
-function initMap(lat=44.384477, long=7.542671) {
+async function initMap(lat=44.384477, long=7.542671) {
 
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
@@ -196,7 +196,7 @@ function initMap(lat=44.384477, long=7.542671) {
 
 }
 
-$(document).ready(function(){
+$(document).ready(async function(){
     var mapfader = document.getElementById("map-fader");
     mapfader.classList.remove("enable-fade")
     if (typeof geoip2 !== 'undefined'){
