@@ -54,10 +54,11 @@
     </head>
 
     <body>
-
-        <div class="index">            
+        <div class="index">      
             <link defer rel="stylesheet" type="text/css" href="./css/menu.scss"/>
             <link defer rel="stylesheet" type="text/css" href="./css/switch.scss"/>
+            <link defer rel="stylesheet" type="text/css" href="./css/select.scss"/>
+
             <menu>
                 <a href="#feat"><div class="item">Key features</div></a>
                 <a href="#products"><div class="item">Products</div></a>
@@ -79,6 +80,12 @@
             <sidebar></sidebar>
             
             <head-container>
+                <div class="chooseLang">
+                    <div>
+                        <span id="it-lang" class="lang it-lang" onclick="changeLang('italiano', this)"></span>
+                        <span id="en-lang" class="lang en-lang chosen" onclick="changeLang('english', this)"></span>
+                    </div>
+                </div>
                 <logo-container>
                     <logo></logo>
                     <info>
@@ -165,6 +172,7 @@
         <script defer type= "text/javascript" src="./mcsub-min.js"></script>
         <script defer type= "text/javascript" src="./mcsub-form.js"></script>
         <script defer type= "text/javascript" src="./switch.js"></script>
+        <script defer type= "text/javascript" src="./lang.js"></script>
         <script src="https://www.w3schools.com/lib/w3data.js"></script>
         <script>
             w3IncludeHTML();
