@@ -60,13 +60,24 @@
             <link defer rel="stylesheet" type="text/css" href="./css/select.scss"/>
 
             <menu>
-                <a href="#feat"><div class="item">Key features</div></a>
-                <a href="#products"><div class="item">Products</div></a>
-                <a href="#getin"><div class="item">Getting in</div></a>
-                <a href="#team"><div class="item">Team</div></a>
-                <a href="#partners"><div class="item">Partners</div></a>
-                <a href="#awards"><div class="item">Awards</div></a>
-                <a href="#contacts"><div class="item">Contacts</div></a>
+                <span lang="en">
+                    <a href="#feat"><div class="item">Key features</div></a>
+                    <a href="#products"><div class="item">Products</div></a>
+                    <a href="#getin"><div class="item">Getting in</div></a>
+                    <a href="#team"><div class="item">Team</div></a>
+                    <a href="#partners"><div class="item">Partners</div></a>
+                    <a href="#awards"><div class="item">Awards</div></a>
+                    <a href="#contacts"><div class="item">Contacts</div></a>
+                </span>
+                <span lang="it">
+                    <a href="#feat"><div class="item">Caratterstiche</div></a>
+                    <a href="#products"><div class="item">Prodotti</div></a>
+                    <a href="#getin"><div class="item">Come iniziare</div></a>
+                    <a href="#team"><div class="item">Squadra</div></a>
+                    <a href="#partners"><div class="item">Partner</div></a>
+                    <a href="#awards"><div class="item">Premi</div></a>
+                    <a href="#contacts"><div class="item">Contatti</div></a>
+                </span>
                 <div class="switch-container">
                     <div class='toggle toggle-on' id='switch'>
                         <div  class="toggle-text-on">Light mode</div>
@@ -82,8 +93,8 @@
             <head-container>
                 <div class="chooseLang">
                     <div>
-                        <span id="it-lang" class="lang it-lang" onclick="changeLang('italiano', this)"></span>
-                        <span id="en-lang" class="lang en-lang chosen" onclick="changeLang('english', this)"></span>
+                        <span id="it-lang" class="lang it-lang" onclick="changeLang('it', this)"></span>
+                        <span id="en-lang" class="lang en-lang chosen" onclick="changeLang('en', this)"></span>
                     </div>
                 </div>
                 <logo-container>
@@ -132,16 +143,24 @@
             <link defer rel="stylesheet" type="text/css" href="./css/subform.scss"/>
             <form-container>
                 <div class="form-title">
-                    Getting curious? Register now!
+                    <span lang="en">Getting curious? Register now!</span>
+                    <span lang="it">Curioso? Registrati ora!</span>
                 </div>
                 <div class="form-description">
-                    You'll receive updates, blog links and useful information about Elemento's progress.
+                    <span lang="en">You'll receive updates, blog links and useful information about Elemento's progress.</span>
+                    <span lang="it">Riceverai update, post del nostro blog e altri informazioni utili.</span>
                 </div>
                 <div id="mailchimpform" class="subscribe">
                     <form action="https://brixtol.us5.list-manage.com/subscribe/post" novalidate>
                         <input type="email" id="email" name="EMAIL"/>
-                        <label form="email" id="email-label">Insert email address</label>
-                        <button id="button" type="submit" name="subscribe">Submit</button>
+                        <label form="email" id="email-label">
+                            <span lang="en">Insert email address</span>
+                            <span lang="it">Inserisci la tua email</span>
+                        </label>
+                        <button id="button" type="submit" name="subscribe">
+                            <span lang="en">Submit</span>
+                            <span lang="it">Invia</span>
+                        </button>
                     </form>
                 </div>
                 <div id="response" class="response" style="display:none"></div>
@@ -159,10 +178,12 @@
                 <div class="ms-wrapper">
                     <div class="ms-grid">
                         <div class="ms-grid-item">
-                            <div w3-include-html="./content.html"></div>
+                            <div lang="en" w3-include-html="./content_en.html"></div>
+                            <div lang="it" w3-include-html="./content_it.html"></div>
                         </div>
                         <div class="ms-grid-item">
-                            <div w3-include-html="./content.html"></div>
+                            <div lang="en" w3-include-html="./content_en.html"></div>
+                            <div lang="it" w3-include-html="./content_it.html"></div>
                         </div>
                     </div>
                 </div>
