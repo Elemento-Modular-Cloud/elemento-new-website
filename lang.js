@@ -1,6 +1,8 @@
 const langitems_en = document.querySelectorAll("[lang=en]");
 const langitems_it = document.querySelectorAll("[lang=it]");
 const container = document.querySelector('.chooseLang').classList;
+const it_btn = document.getElementById('it-lang').classList;
+const en_btn = document.getElementById('en-lang').classList;
 
 function makeVisible(items) {
     items.forEach(item => {
@@ -17,36 +19,34 @@ function makeInvisible(items) {
 function useEN() {
     makeInvisible(langitems_it);
     makeVisible(langitems_en);
+    en_btn.add('chosen');
+    it_btn.remove('chosen');
 }
 
 function useIT() {
     makeInvisible(langitems_en);
     makeVisible(langitems_it);
+    it_btn.add('chosen');
+    en_btn.remove('chosen');
 }
 
-function changeLang(language, el) {    
-    el = el.classList;
+function changeLang(language) {
     if (container.contains('open')) {
         container.remove('open');
-        if (!el.contains('chosen')) {
-            
-            document.querySelector('.chooseLang .chosen').classList.remove('chosen');
-            el.add('chosen');
-            
-            console.log(language + ' chosen')
-            
-            if(language === "it"){
-                useIT();
-            }
+        it_btn.remove('chosen');
+        en_btn.remove('chosen');
+        if(language === "it"){
+            useIT();
+        }
 
-            if(language === "en"){
-                useEN();
-            }
-            
+        if(language === "en"){
+            useEN();
         }
         return;
     }
     container.add('open');
 }
 
-useEN();
+var userLang = navigator.language || navigator.userLanguage;
+console.log(userLang)
+userLang.includes("it")?useIT():useEN();
