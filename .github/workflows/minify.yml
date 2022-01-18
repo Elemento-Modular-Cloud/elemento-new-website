@@ -1,3 +1,7 @@
+name: Minify
+
+on: [push]
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
