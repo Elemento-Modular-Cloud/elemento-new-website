@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Minify Actions
-      uses: amireshoon/minifyAction@main
+      uses: Elemento-Modular-Cloud/minifyAction@main
       with:
         repo: $prepo
     - name: Minifying Codes
