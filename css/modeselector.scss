@@ -1,7 +1,6 @@
 .ms-wrapper {
     position: relative;
     height: fit-content;
-    // min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: visible;
@@ -16,8 +15,6 @@
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
-    // grid-auto-rows: minmax(100vh, fit-content);
-    // background-color: turquoise;
     left: 0;
     overflow-x: hidden;
     overflow-y: visible;

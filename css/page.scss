@@ -1,6 +1,5 @@
 .page {
     position: relative;
-    // min-height: 100vh;
     width: 100vw;
     height: fit-content;
 }
@@ -34,7 +33,6 @@
     font-family: 'Muli', sans-serif;
     font-size: 2vh;
     text-align: left;
-    // white-space: pre-line;
 }
 
 
@@ -53,7 +51,6 @@
     display: grid;
     table-layout: fixed;
     width: 100%;
-    // margin: 30%;
     margin-top: 3vh;
     margin-bottom: 3vh;
 }
@@ -67,7 +64,6 @@
 @media (orientation: portrait), only screen and (pointer: coarse) {
     .team {
         grid-template-columns: repeat(1, 1fr);
-        // padding-bottom: 10vh;
     }
 }
 
@@ -87,8 +83,6 @@
 }
 
 .team .person .picture {
-    // display: table-cell;
-    // width: 40%;
     height: auto;
     text-align: center;
 }
@@ -160,8 +154,6 @@
 
 .product {
     display: flex;
-    // align-items: center;
-    // justify-content: center;
     width: 100%;
     padding-top: 10%;
 }
@@ -301,7 +293,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    // white-space: pre-line;
 }
 
 .contact img {
