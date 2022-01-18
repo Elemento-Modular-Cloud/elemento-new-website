@@ -1,11 +1,9 @@
 .ocean {
   position:relative;
-  top: 100vh;
+  top: 96vh;
   left: 0;
   height: fit;
   width:100vw;
-  border-color: red;
-  border-style: solid;
   transform: translateY(-100%);
 }
 
@@ -20,7 +18,7 @@
   background-repeat: repeat-x;
   background-size: 100vw 6vh;
   position: absolute;
-  top: calc(96vh - 6px);
+  top: 0;
   width: 300vw;
   height: 6vh;
   animation: wave 73s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
