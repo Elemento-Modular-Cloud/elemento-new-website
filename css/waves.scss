@@ -14,6 +14,7 @@
 }
 
 .wave {
+  background-image: url("../img/waves/wavewhite4x.png");
   background-image: image-set("../img/waves/wavewhite4x.webp" type("image/webp"), "../img/waves/wavewhite4x.png" type("image/png"));
   background-repeat: repeat-x;
   background-size: 100vw 6vh;
@@ -33,6 +34,7 @@
 }
 
 .wave:nth-of-type(even) {
+  background-image: url("../img/waves/wavedark4x.png");
   background-image: image-set("../img/waves/wavedark4x.webp" type("image/webp"), "../img/waves/wavedark4x.png" type("image/png"));
   background-repeat: repeat-x;
   background-size: 100vw 6vh;
@@ -40,7 +42,7 @@
   filter: drop-shadow(0 0 20px var(--lighter-grey));
 }
 
-@supports not (background-image: image-set("foo.png" type("image/png"))) {
+@supports (background-image: image-set("foo.png" type("image/png"))) {
   .wave {
     background-image: url("../img/waves/wavewhite4x.png");
   }
