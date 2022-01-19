@@ -72,7 +72,7 @@
             <link defer rel="stylesheet" href="css/select.scss" type="text/css"/>
 
             <menu>
-                <span lang="en">
+                <span lang="en" id="menu_en">
                     <a href="#feat"><div class="item">Key features</div></a>
                     <a href="#products"><div class="item">Products</div></a>
                     <a href="#getin"><div class="item">Getting in</div></a>
@@ -81,7 +81,7 @@
                     <a href="#awards"><div class="item">Awards</div></a>
                     <a href="#contacts"><div class="item">Contacts</div></a>
                 </span>
-                <span lang="it">
+                <span lang="it" id="menu_it">
                     <a href="#feat"><div class="item">Caratterstiche</div></a>
                     <a href="#products"><div class="item">Prodotti</div></a>
                     <a href="#getin"><div class="item">Come iniziare</div></a>
@@ -189,13 +189,9 @@
             <div class="page">
                 <div class="ms-wrapper">
                     <div class="ms-grid">
-                        <div class="ms-grid-item">
-                            <div lang="en" w3-include-html="content_en.html"></div>
-                            <div lang="it" w3-include-html="content_it.html"></div>
+                        <div class="ms-grid-item" id="content-light">
                         </div>
-                        <div class="ms-grid-item">
-                            <div lang="en" w3-include-html="content_en.html"></div>
-                            <div lang="it" w3-include-html="content_it.html"></div>
+                        <div class="ms-grid-item" id="content-dark">
                         </div>
                     </div>
                 </div>
@@ -205,11 +201,7 @@
         <script defer type= "text/javascript" src="mcsub-min.js"></script>
         <script defer type= "text/javascript" src="mcsub-form.js"></script>
         <script defer type= "text/javascript" src="switch.js"></script>
-        <script defer type= "text/javascript" src="lang.js"></script>
-        <script src="https://www.w3schools.com/lib/w3data.js"></script>
-        <script>
-            w3IncludeHTML();
-        </script>
+        <script defer type= "text/javascript" src="lang2.js"></script>
         <script>
             jQuery.event.special.touchstart = {
                 setup: function( _, ns, handle ) {
