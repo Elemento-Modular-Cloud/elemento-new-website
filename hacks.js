@@ -6,7 +6,7 @@ var insertBefore = head.insertBefore;
 // Replace it!
 head.insertBefore = function (newElement, referenceElement) {
 
-    if (newElement.href && newElement.href.indexOf('https://fonts.googleapis.com/css?family=Roboto') === 0) {
+    if (newElement.href && newElement.href.indexOf("https://fonts.googleapis.com/css?family=Roboto") === 0) {
         return;
     }
 
