@@ -4,6 +4,7 @@
   left: 0;
   height: fit;
   width:100vw;
+  z-index: 1;
   transform: translateY(-100%);
 }
 
@@ -14,15 +15,14 @@
 }
 
 .wave {
-  background-image: url("../img/waves/wavewhite4x.png");
-  background-image: image-set("../img/waves/wavewhite4x.webp" type("image/webp"), "../img/waves/wavewhite4x.png" type("image/png"));
+  background-image: url("../img/waves/wavewhite.svg");
   background-repeat: repeat-x;
-  background-size: 100vw 6vh;
+  background-size: contain;
   position: absolute;
   top: 0;
   width: 300vw;
   height: 6vh;
-  animation: wave 73s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  animation: wave 146s infinite;
   opacity: 1;
   bottom: 0;
   transform: translate3d(0,0,0);
@@ -34,32 +34,22 @@
 }
 
 .wave:nth-of-type(even) {
-  background-image: url("../img/waves/wavedark4x.png");
-  background-image: image-set("../img/waves/wavedark4x.webp" type("image/webp"), "../img/waves/wavedark4x.png" type("image/png"));
+  background-image: url("../img/waves/wavedark.svg");
   background-repeat: repeat-x;
-  background-size: 100vw 6vh;
+  background-size: contain;
   -webkit-filter: drop-shadow(0 0 20px var(--lighter-grey));
   filter: drop-shadow(0 0 20px var(--lighter-grey));
 }
 
-@supports (background-image: image-set("foo.png" type("image/png"))) {
-  .wave {
-    background-image: url("../img/waves/wavewhite4x.png");
-  }
-  .wave:nth-of-type(even) {
-    background-image: url("../img/waves/wavedark4x.png");
-  }
-}
-
 .wave:nth-of-type(3), .wave:nth-of-type(4) {
-  animation: wave 51s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, swell 4s ease -1.25s infinite;
+  animation: wave 102s infinite, swell 4s ease -1.25s infinite;
   opacity: .4;
   left: 50%;
   margin-left: -13vw;
 }
 
 .wave:nth-of-type(5), .wave:nth-of-type(6) {
-    animation: wave 27s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -2s infinite, swell 7s ease -5.25s infinite;
+    animation: wave 54s -2s infinite, swell 7s ease -5.25s infinite;
     opacity: .6;
     left: 50%;
     margin-left: -77vw;
@@ -76,13 +66,14 @@
 
 @keyframes swell {
   0%, 100% {
-    transform: translate3d(0,-6px,0);
+    transform: translate3d(0,0,0);
   }
   50% {
-    transform: translate3d(0,8px,0);
+    transform: translate3d(0,14px,0);
   }
 }
 
 .hide-wave {
   opacity: 0 !important;
+  visibility: hidden;
 }
