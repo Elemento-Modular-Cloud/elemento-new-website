@@ -175,25 +175,27 @@ const styles = [
 var lat=44.384477, long=7.542671;
 
 async function initMap() {
-    var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 9,
+    if(google !== 'undefined'){
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 9,
 
-        disableDefaultUI: true,
+            disableDefaultUI: true,
 
-        // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(lat, long), // Kings Park
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(lat, long), // Kings Park
 
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
-        styles: styles
-    };
+            // How you would like to style the map. 
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: styles
+        };
 
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map');
-    // Create the Google Map using out element and options defined above
-    new google.maps.Map(mapElement, mapOptions);
+        // Get the HTML DOM element that will contain your map 
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+        // Create the Google Map using out element and options defined above
+        new google.maps.Map(mapElement, mapOptions);
+    }
 }
 
 const mapfader = document.getElementById("map-fader").classList;
