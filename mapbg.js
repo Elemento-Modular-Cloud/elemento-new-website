@@ -196,9 +196,10 @@ async function initMap(lat=44.384477, long=7.542671) {
 
 }
 
+const mapfader = document.getElementById("map-fader").classList;
+
 $(document).ready(async function(){
-    var mapfader = document.getElementById("map-fader");
-    mapfader.classList.remove("enable-fade")
+    mapfader.remove("enable-fade")
     if (typeof geoip2 !== 'undefined'){
         geoip2.city(
         function(geoIPResponse) {
@@ -210,5 +211,5 @@ $(document).ready(async function(){
     } else {
         initMap(44.384477, 7.542671);
     }
-    mapfader.classList.add("enable-fade")
+    mapfader.add("enable-fade")
 });
