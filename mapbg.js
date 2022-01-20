@@ -192,13 +192,12 @@ async function initMap(lat=44.384477, long=7.542671) {
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
     // Create the Google Map using out element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
-
+    new google.maps.Map(mapElement, mapOptions);
 }
 
 const mapfader = document.getElementById("map-fader").classList;
 
-$(document).ready(async function(){
+async function drawMap(){
     mapfader.remove("enable-fade")
     if (typeof geoip2 !== 'undefined'){
         geoip2.city(
@@ -212,4 +211,6 @@ $(document).ready(async function(){
         initMap(44.384477, 7.542671);
     }
     mapfader.add("enable-fade")
-});
+};
+
+drawMap();

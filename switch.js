@@ -1,5 +1,6 @@
 const ms = document.getElementsByClassName("ms-grid");
 const wave = document.getElementsByClassName("wave");
+const toggle_switch = document.getElementsByClassName("switch");
 
 function toggle(){
     document.getElementById("switch").classList.toggle('toggle-on');
@@ -19,7 +20,4 @@ let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
 if(matched)
     toggle()
 
-$('.toggle').click(function(e){
-    e.preventDefault(); // The flicker is a codepen thing
-    toggle();
-});
+// toggle_switch.onclick = toggle();
