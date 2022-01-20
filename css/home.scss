@@ -50,6 +50,7 @@ map-container {
     height: 100%;
     width: calc(100% - var(--logo-container-width) / 2);
     background-color: var(--dark-grey);
+    touch-action: none;
 }
 
 map-fader {
@@ -84,6 +85,7 @@ map {
     width: 100%;
     pointer-events: none;
     animation: zoomslow 200s ease-in-out infinite;
+    touch-action: none;
 }
 
 map::after {
