@@ -6,7 +6,7 @@ const en_btn = document.getElementById('en-lang').classList;
 const contentlight = document.getElementById('content-light');
 const contentdark = document.getElementById('content-dark');
 
-function loadPage(href){
+async function loadPage(href){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", href, false);
     xmlhttp.send();
@@ -28,13 +28,15 @@ function makeInvisible(items) {
     });
 }
 
-function useEN() {
+async function useEN() {
     makeInvisible(langitems_it);
     makeVisible(langitems_en);
     if(en_page === ''){
         console.debug("Lazy loading EN page");
-        en_page = loadPage("content_en.html");
+        en_page = await loadPage("content_en.html");
     }
+
+    console.log(en_page);
 
     contentlight.innerHTML = '';
     contentdark.innerHTML = '';
@@ -44,13 +46,15 @@ function useEN() {
     it_btn.remove('chosen');
 }
 
-function useIT() {
+async function useIT() {
     makeInvisible(langitems_en);
     makeVisible(langitems_it);
     if(it_page === ''){
         console.debug("Lazy loading IT page");
-        it_page = loadPage("content_it.html");
+        it_page = await loadPage("content_it.html");
     }
+
+    console.log(it_page);
 
     contentlight.innerHTML = '';
     contentdark.innerHTML = '';
@@ -60,7 +64,7 @@ function useIT() {
     en_btn.remove('chosen');
 }
 
-function changeLang(language) {
+async function changeLang(language) {
     if (container.contains('open')) {
         container.remove('open');
         it_btn.remove('chosen');
