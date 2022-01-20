@@ -4,11 +4,15 @@ const head = document.getElementsByTagName('head')[0];
 var insertBefore = head.insertBefore;
 
 // Replace it!
-head.insertBefore = function (newElement, referenceElement) {
+async function hackroboto(){
+    head.insertBefore = function (newElement, referenceElement) {
 
-    if (newElement.href && newElement.href.indexOf("https://fonts.googleapis.com/css?family=Roboto") === 0) {
-        return;
-    }
+        if (newElement.href && newElement.href.indexOf("https://fonts.googleapis.com/css?family=Roboto") === 0) {
+            return;
+        }
 
-    insertBefore.call(head, newElement, referenceElement);
-};
+        insertBefore.call(head, newElement, referenceElement);
+    };
+}
+
+hackroboto();
