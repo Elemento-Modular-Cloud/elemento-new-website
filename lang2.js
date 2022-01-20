@@ -5,12 +5,22 @@ const it_btn = document.getElementById('it-lang').classList;
 const en_btn = document.getElementById('en-lang').classList;
 const contentlight = document.getElementById('content-light');
 const contentdark = document.getElementById('content-dark');
+const xmlhttp = new XMLHttpRequest();
 
-async function loadPage(href){
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", href, false);
-    xmlhttp.send();
-    return xmlhttp.responseText;
+function getHTML(url) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', url, true);
+        xhr.onload = function () {
+            var status = xhr.status;
+            if (status == 200) {
+                resolve(xhr.responseText);
+            } else {
+                reject(status);
+            }
+        };
+        xhr.send();
+    });
 }
 
 var en_page = '';
@@ -33,10 +43,8 @@ async function useEN() {
     makeVisible(langitems_en);
     if(en_page === ''){
         console.debug("Lazy loading EN page");
-        en_page = await loadPage("content_en.html");
+        en_page = await getHTML("content_en.html");
     }
-
-    console.log(en_page);
 
     contentlight.innerHTML = '';
     contentdark.innerHTML = '';
@@ -51,10 +59,8 @@ async function useIT() {
     makeVisible(langitems_it);
     if(it_page === ''){
         console.debug("Lazy loading IT page");
-        it_page = await loadPage("content_it.html");
+        it_page = await getHTML("content_it.html");
     }
-
-    console.log(it_page);
 
     contentlight.innerHTML = '';
     contentdark.innerHTML = '';
