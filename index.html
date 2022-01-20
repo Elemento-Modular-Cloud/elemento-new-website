@@ -72,6 +72,36 @@
             <link defer rel="stylesheet" href="css/switch.scss" type="text/css"/>
             <link defer rel="stylesheet" href="css/select.scss" type="text/css"/>
 
+            <shadow></shadow>
+
+            <head-container>
+                <div class="chooseLang">
+                    <div>
+                        <span id="it-lang" class="lang it-lang" onclick="changeLang('it')"></span>
+                        <span id="en-lang" class="lang en-lang chosen" onclick="changeLang('en')"></span>
+                    </div>
+                </div>
+                <logo-container>
+                    <logo></logo>
+                    <info>
+                        <div class="title">ELEMENTO</div>
+                        <div class="subtitle-wrapper">
+                            <div class="subtitle">
+                                <table>
+                                    <div class="right">MODULAR</div>
+                                    <div class="left">CLOUD</div>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="abstract-wrapper">
+                            <div class="payoff">
+                                JOIN THE CLOUD REVOLUTION
+                            </div>
+                        </div>
+                    </info>
+                </logo-container>
+            </head-container>
+
             <menu>
                 <span lang="en" id="menu_en">
                     <a href="#feat"><div class="item">Key features</div></a>
@@ -100,36 +130,7 @@
                 </div>
             </menu>
 
-            <shadow></shadow>
             <sidebar></sidebar>
-            
-            <head-container>
-                <div class="chooseLang">
-                    <div>
-                        <span id="it-lang" class="lang it-lang" onclick="changeLang('it')"></span>
-                        <span id="en-lang" class="lang en-lang chosen" onclick="changeLang('en')"></span>
-                    </div>
-                </div>
-                <logo-container>
-                    <logo></logo>
-                    <info>
-                        <div class="title">ELEMENTO</div>
-                        <div class="subtitle-wrapper">
-                            <div class="subtitle">
-                                <table>
-                                    <div class="right">MODULAR</div>
-                                    <div class="left">CLOUD</div>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="abstract-wrapper">
-                            <div class="payoff">
-                                JOIN THE CLOUD REVOLUTION
-                            </div>
-                        </div>
-                    </info>
-                </logo-container>
-            </head-container>
 
             <map-container>
                 <map-fader id="map-fader">
@@ -165,7 +166,7 @@
                 <div id="mailchimpform" class="subscribe">
                     <form action="https://brixtol.us5.list-manage.com/subscribe/post" novalidate>
                         <input type="email" id="email" name="EMAIL"/>
-                        <label form="email" id="email-label" for="email">
+                        <label form="email" id="email-label" for="mce-EMAIL">
                             <span lang="en">Insert email address</span>
                             <span lang="it">Inserisci la tua email</span>
                         </label>
