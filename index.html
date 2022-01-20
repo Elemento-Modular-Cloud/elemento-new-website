@@ -23,7 +23,7 @@
         <link rel="preload" href="css/colors.scss" as="style"/>
         <link rel="preload" href="css/variables.scss" as="style"/>
 
-        <link rel="preload" href="img/logos/dark.svg" as="image">
+        <!-- <link rel="preload" href="img/logos/dark.svg" as="image"> -->
 
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Muli&display=swap" as="style">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap">
@@ -33,8 +33,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap">
         
         <link rel="preload" href="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js" as="script">
+        <link rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyADQGgBZ9--OXv11SDL_tv3wmzws6r2MHg" as="script">
 
         <link rel="preload" href="img/schemas/grid_nonoise.svg" as="image">
+        <!-- <link rel="preload" href="img/schemas/bubble.png" as="image"> -->
         <link rel="preload" href="https://maps.gstatic.com/mapfiles/api-3/images/google_white5_hdpi.png" as="image">
 
         <link rel="preload" href="css/home.scss" as="style">
@@ -61,6 +63,7 @@
 
             gtag('config', 'UA-153798322-1');
         </script>
+        <script defer type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
     </head>
 
     <body>
@@ -129,13 +132,12 @@
             </head-container>
 
             <map-container>
-                <script async type= "text/javascript" src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
-                <script async type= "text/javascript" src="mapbg.js"></script>
-                <script async type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADQGgBZ9--OXv11SDL_tv3wmzws6r2MHg&amp;callback=initMap"></script>
                 <map-fader id="map-fader">
                     <map id="map"></map>
                 </map-fader>
                 <map-shadow></map-shadow>
+                <script defer type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADQGgBZ9--OXv11SDL_tv3wmzws6r2MHg"></script>
+                <script async defer type= "text/javascript" src="mapbg.js"></script>
             </map-container>
 
             <link defer rel="stylesheet" href="css/waves.scss" type="text/css"/>

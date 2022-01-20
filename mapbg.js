@@ -172,8 +172,9 @@ const styles = [
     }
 ]
 
-async function initMap(lat=44.384477, long=7.542671) {
+var lat=44.384477, long=7.542671;
 
+async function initMap() {
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
         zoom: 9,
@@ -202,14 +203,11 @@ async function drawMap(){
     if (typeof geoip2 !== 'undefined'){
         geoip2.city(
         function(geoIPResponse) {
-            initMap(geoIPResponse.location.latitude, geoIPResponse.location.longitude);
-        }, 
-        function(geoIPResponse) {
-            initMap(44.384477, 7.542671);
+            lat = geoIPResponse.location.latitude;
+            long = geoIPResponse.location.longitude;
         });
-    } else {
-        initMap(44.384477, 7.542671);
     }
+    initMap();
     mapfader.add("enable-fade")
 };
 
