@@ -70,7 +70,7 @@
 .team .person {
     display: flex;
     align-items: top;
-    justify-content: center;
+    justify-content: left;
     padding: 3%;
 }
 
@@ -87,19 +87,38 @@
     text-align: center;
 }
 
-.picture img {
-    width: 12vh !important;
+.picture .cubewrapper {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    height: 12vh;
+    width: 12vh;
+    background-image: url('../img/schemas/cubewhite.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.picture .cubewrapper .facelet {
+    position: absolute;
+    bottom: 0 !important;
+    left: calc((12vh - 1.73 * 6vh) / 4) !important;
+    padding: .2vh;
+    width: 5.55vh !important;
+    height: 4.78vh !important;
+    background-color: white;
+    -webkit-filter: none !important;
+    filter: none !important;
+    transform: rotate(-30deg) skew(-30deg) translateX(92%) translateY(-5%)!important;
+    transform-origin: bottom right;
+}
+
+.team .person .picture img {
+    width: 12vh;
     max-width: 100%;
     margin: auto;
     height: 12vh;
     transform: translate3d(0,0,0);
-    -webkit-filter: drop-shadow(0 0px 12px var(--dark-grey));
-    filter: drop-shadow(0 0px 12px var(--dark-grey));
-}
-
-.picture .fill-white {
-    background-color: white;
-    padding: 3px;
 }
 
 .team .person .text {
