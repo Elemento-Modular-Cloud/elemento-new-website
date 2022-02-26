@@ -3,6 +3,7 @@ content-wrapper {
     display: grid;
     height: fit-content;
     width: 80%;
+    z-index: 0;
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 5%;
@@ -40,7 +41,7 @@ content-wrapper:nth-of-type(even) picture img, content-wrapper:nth-of-type(odd) 
 .content-title {
     text-transform: uppercase;
     color: lighten(var(--light-grey), 20%);
-    font-family: 'heroregular', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 65%;
     margin: auto;
     text-align: center;
@@ -59,7 +60,7 @@ content-wrapper container a {
 }
 
 content-wrapper container name {
-    font-family: 'heroregular', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-size: 2.2vmin;
     color: var(--light-orange);
@@ -67,7 +68,7 @@ content-wrapper container name {
 }
 
 content-wrapper container tagline {
-    font-family: 'heroregular', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 4vmin;
     color: white;
     padding: 0;
@@ -77,7 +78,7 @@ content-wrapper container tagline {
 
 content-wrapper container ctext,
 content-wrapper container a {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 2vmin;
     color: inherit;
     // white-space: pre-line;
@@ -100,7 +101,7 @@ feature-grid {
     padding: 0;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 feature {
@@ -137,7 +138,7 @@ feature .name, feature .description {
     display: inline-block;
     width: 95%;
     text-align: center;
-    font-family: 'heroregular', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 4vh;
     padding-top: 1vmin;
     padding-bottom: 1vmin;
