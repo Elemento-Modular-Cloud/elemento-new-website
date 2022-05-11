@@ -207,7 +207,7 @@ logo-container info {
     map-container {
         left: 0;
         width: 100%;
-        opacity: .3;
+        opacity: 0;
     }
 
     head-container {
@@ -217,7 +217,7 @@ logo-container info {
     }
 
     sidebar, shadow {
-        visibility: hidden;
+        width: 50%;
     }
 
     logo-container {
@@ -230,14 +230,16 @@ logo-container info {
     text-align: center;
 }
 
-.title {
+.title, .titleleft {
     font-size: 9vh;
     color: var(--dark-orange);
     line-height: 7vh;
     padding: 0;
     padding-top: 2vh;
-    -webkit-text-stroke: 2px black;
-    paint-order: stroke fill;
+}
+
+.titleleft {
+    color: var(--dark-grey);
 }
 
 .subtitle-wrapper{
@@ -250,7 +252,7 @@ logo-container info {
 .subtitle {
     display: table;
     font-size: 2.5vh;
-    color: white;
+    color: whitesmoke;
     letter-spacing: 10px;
     width: 100%;
 }
@@ -261,17 +263,17 @@ logo-container info {
     padding: 0;
     margin: 0;
     border-collapse: collapse;
+    font-family: 'heroregular', sans-serif;
 }
 
 .right {
     text-align: right;
-    color: var(--dark-grey)
+    color: var(--dark-grey);
 }
 
 .left {
     text-align: left;
     padding-left: calc(70vmin * 0.7 / 8 / 4 / 3);
-    font-family: 'heroregular', sans-serif;
 }
 
 .abstract-wrapper {

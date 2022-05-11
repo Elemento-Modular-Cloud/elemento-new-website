@@ -26,7 +26,7 @@
 }
 
 .toggle.toggle-on{
-    border-color: var(--light-orange);
+    border-color: var(--dark-orange);
     -webkit-transition: all .5s .15s ease-out;
     transition: all .5s .15s ease-out;
 }
@@ -46,7 +46,7 @@
 
 .toggle-on .toggle-button{
     left: calc(100% - 15px);
-    background-color: var(--light-orange);
+    background-color: var(--dark-orange);
     -webkit-transition: all .2s .1s, right .1s;
     transition: all .2s .1s, right .1s;
 }
@@ -72,7 +72,7 @@
 }
 
 .toggle-on .toggle-text-on{
-    color: var(--light-orange);
+    color: var(--dark-orange);
 }
 
 .toggle-text-off{

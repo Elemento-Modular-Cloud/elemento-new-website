@@ -31,12 +31,8 @@
         <link rel=“preconnect” href="https://fonts.googleapis.com"/>
         <link rel=“dns-prefetch” href="https://www.google-analytics.com"/>
         <link rel=“preconnect” href="https://www.google-analytics.com"/>
-        <!-- <link rel=“dns-prefetch” href="https://maps.googleapis.com"/> -->
-        <!-- <link rel=“preconnect” href="https://maps.googleapis.com"/> -->
         <link rel=“dns-prefetch” href="https://ajax.googleapis.com"/>
         <link rel=“preconnect” href="https://ajax.googleapis.com"/>
-        <!-- <link rel=“dns-prefetch” href="https://geoip-js.com"/> -->
-        <!-- <link rel=“preconnect” href="https://geoip-js.com"/> -->
         <script defer src="hacks.js"></script>
 
         <link defer rel="shortcut icon" type="image/x-icon" href="img/icons/LogoDark.ico">
@@ -52,13 +48,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap">
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap" as="style">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans&display=swap">
-        
-        <!-- <link rel="preload" href="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js" as="script"> -->
-        <!-- <link rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyADQGgBZ9--OXv11SDL_tv3wmzws6r2MHg" as="script"> -->
 
         <link rel="preload" href="img/schemas/grid_nonoise.svg" as="image">
-        <!-- <link rel="preload" href="img/schemas/bubble.png" as="image"> -->
-        <!-- <link rel="preload" href="https://maps.gstatic.com/mapfiles/api-3/images/google_white5_hdpi.png" as="image"> -->
 
         <link rel="preload" href="css/home.scss" as="style">
         <link rel="preload" href="css/menu.scss" as="style">
@@ -68,7 +59,8 @@
         <link rel="preload" href="css/switch.scss" as="style">
         <link rel="preload" href="css/modeselector.scss" as="style">
         <link rel="preload" href="css/content.scss" as="style">
-        <link rel="preload" href="css/select.scss" as="style">
+        <link rel="preload" href="css/chooselang.scss" as="style">
+        <!-- <link rel="preload" href="css/choosemode.scss" as="style"> -->
 
         <link rel="stylesheet" href="css/fonts.scss" type="text/css"/>
         <link rel="stylesheet" href="css/colors.scss" type="text/css"/>
@@ -93,21 +85,14 @@
         <div class="index">      
             <link defer rel="stylesheet" href="css/menu.scss" type="text/css"/>
             <link defer rel="stylesheet" href="css/switch.scss" type="text/css"/>
-            <link defer rel="stylesheet" href="css/select.scss" type="text/css"/>
-
-            <!-- <shadow></shadow> -->
+            <link defer rel="stylesheet" href="css/chooselang.scss" type="text/css"/>
+            <!-- <link defer rel="stylesheet" href="css/choosemode.scss" type="text/css"/> -->
 
             <head-container>
-                <div class="chooseLang">
-                    <div>
-                        <span id="it-lang" class="lang it-lang" onclick="changeLang('it')"></span>
-                        <span id="en-lang" class="lang en-lang chosen" onclick="changeLang('en')"></span>
-                    </div>
-                </div>
                 <logo-container>
                     <logo></logo>
                     <info>
-                        <div class="title"><span style="color: var(--dark-grey)">ELEM</span>ENTO</div>
+                        <div class="title"><span class="titleleft">ELEM</span>ENTO</div>
                         <div class="subtitle-wrapper">
                             <div class="subtitle">
                                 <table>
@@ -116,20 +101,29 @@
                                 </table>
                             </div>
                         </div>
-                        <!-- <div class="abstract-wrapper">
-                            <div class="payoff">
-                                Ready. Set. Cloud.
-                            </div>
-                        </div> -->
                     </info>
                 </logo-container>
             </head-container>
 
+            <div class="chooseLang">
+                <div>
+                    <span id="it-lang" class="lang it-lang" onclick="changeLang('it')"></span>
+                    <span id="en-lang" class="lang en-lang chosen" onclick="changeLang('en')"></span>
+                </div>
+            </div>
+
+            <!-- <div class="chooseMode">
+                <div>
+                    <span id="light-mode" class="mode light-mode"></span>
+                    <span id="dark-mode" class="mode dark-mode chosen"></span>
+                </div>
+            </div> -->
+
             <menu>
                 <span lang="en" id="menu_en">
-                    <a href="#feat"><div class="item">Key features</div></a>
+                    <a href="#feat"><div class="item">Features</div></a>
                     <a href="#products"><div class="item">Products</div></a>
-                    <a href="#getin"><div class="item">Getting in</div></a>
+                    <a href="#getin"><div class="item">Get in</div></a>
                     <a href="#team"><div class="item">Team</div></a>
                     <a href="#partners"><div class="item">Partners</div></a>
                     <a href="#awards"><div class="item">Awards</div></a>
@@ -157,15 +151,6 @@
 
             <map-container>
                 <color-filler/>
-                <map-fader id="map-fader">
-                    <!-- <map id="map"></map> -->
-                    
-                    <!-- <video autoplay muted loop id="myVideo">
-                        <source src="img/particles.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video> -->
-                </map-fader>
-                <map-shadow></map-shadow>
             </map-container>
 
             <link defer rel="stylesheet" href="css/waves.scss" type="text/css"/>
@@ -226,39 +211,15 @@
             </div>
         </page-container>
 
-        <div class="footer footer-light">
+        <!-- <div class="footer footer-light">
             Copyright © 2021-2022 Elemento Srl. Tutti i diritti riservati.<br/>
             CF/P.IVA 03959360045 | Registrata presso il Registro Imprese di Cuneo REA 326571 | Cap. Soc. €10'604,45 i.v.<br/>
             Via Antonio Bassignano 34b - 12100 - Cuneo (CN) - Italy<br/>
-        </div>
+        </div> -->
 
         <script defer type= "text/javascript" src="mcsub-min.js"></script>
         <script defer type= "text/javascript" src="mcsub-form.js"></script>
         <script defer type= "text/javascript" src="switch.js"></script>
         <script defer type= "text/javascript" src="lang2.js"></script>
-        <!-- <script type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADQGgBZ9--OXv11SDL_tv3wmzws6r2MHg"></script> -->
-        <!-- <script async defer type= "text/javascript" src="mapbg.js"></script> -->
-        <!-- <script>
-            jQuery.event.special.touchstart = {
-                setup: function( _, ns, handle ) {
-                    this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-                }
-            };
-            jQuery.event.special.touchmove = {
-                setup: function( _, ns, handle ) {
-                    this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-                }
-            };
-            jQuery.event.special.wheel = {
-                setup: function( _, ns, handle ){
-                    this.addEventListener("wheel", handle, { passive: true });
-                }
-            };
-            jQuery.event.special.mousewheel = {
-                setup: function( _, ns, handle ){
-                    this.addEventListener("mousewheel", handle, { passive: true });
-                }
-            };
-        </script> -->
     </body>
 </html>

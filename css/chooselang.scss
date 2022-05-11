@@ -10,14 +10,15 @@
     position: absolute;
     top: 1vmin;
     left: 1vmin;
+    z-index: 20;
     height: var(--flag-height);
     margin-top: 0;
-    width: var(--flag-width);
+    width: var(--flag-height);
 }
 .chooseLang div {
     height: var(--flag-height);
     position: absolute;
-    width: var(--flag-width);
+    width: var(--flag-height);
 }
 .lang {
     cursor: pointer;
@@ -30,8 +31,10 @@
     -webkit-transition: 0.76s;
     -o-transition: 0.76s;
     transition: 0.76s;
-    width: var(--flag-width);
+    width: var(--flag-height);
     background-size: contain;
+    background-position: center center;
+    border-radius: calc(var(--flag-height)/2);
 }
 
 .it-lang {
@@ -56,7 +59,8 @@
     font-size: 18px;
     line-height: var(--flag-height);
     font-family: 'Muli', sans-serif;
-    color: white;
+    font-weight: bold;
+    color: var(--dark-grey);
     padding-left: calc(var(--flag-width) + var(--text-hmargin));
 }
 
