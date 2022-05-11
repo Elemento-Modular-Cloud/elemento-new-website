@@ -23,6 +23,15 @@ body {
     width: 100vw;
 }
 
+color-filler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-grey);
+}
+
 page-container {
     position: absolute;
     top: 100vh;
@@ -131,14 +140,13 @@ sidebar, shadow {
     top: 0;
     left: 0;
     width: 50%;
-    height: 100%;
-    border-radius: 0 0 8px 0;
-    z-index: 2;
+    height: 100vh;
+    z-index: 0;
 }
 
 sidebar {
     width: 35%;
-    background-color: var(--dark-grey);
+    background-color: var(--dark-orange);
 }
 
 shadow {
@@ -157,7 +165,6 @@ logo-container {
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
     z-index: 3;
-    text-shadow: 0px 0px 8px var(--dark-grey), 0px 0px 8px var(--dark-grey), 0px 0px 8px var(--dark-grey);
 }
 
 logo-container logo {
@@ -165,11 +172,28 @@ logo-container logo {
     display: inline-block;
     height: var(--logo-height);
     width: 100%;
+}
+
+logo-container logo::before, logo-container logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
     background-image: url('../img/logos/dark.svg');
     background-repeat: no-repeat;
     background-position-x: center;
-    -webkit-filter: drop-shadow(2px 0px 12px var(--dark-grey));
-    filter: drop-shadow(2px 0px 12px var(--dark-grey));
+}
+
+logo-container logo::before {
+    background-image: url('../img/logos/back.svg');
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transform: scale(1.04);
 }
 
 logo-container info {
@@ -189,7 +213,6 @@ logo-container info {
     head-container {
         width: 100%;
         height: 70%;
-        // top: -7%;
         z-index: 20;
     }
 
@@ -213,6 +236,8 @@ logo-container info {
     line-height: 7vh;
     padding: 0;
     padding-top: 2vh;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
 }
 
 .subtitle-wrapper{
@@ -225,7 +250,8 @@ logo-container info {
 .subtitle {
     display: table;
     font-size: 2.5vh;
-    color: var(--lighter-grey);
+    color: white;
+    text-shadow: 0px 0px 8px var(--dark-grey), 0px 0px 8px var(--dark-grey), 0px 0px 8px var(--dark-grey);
     letter-spacing: 10px;
     width: 100%;
 }
@@ -273,7 +299,6 @@ logo-container info {
     padding-top: 5vmin;
     font-family: 'herolight', sans-serif;
     font-size: 4vmin;
-    text-transform: uppercase;
 }
 
 @media (orientation: portrait), only screen and (pointer: coarse) {
@@ -292,10 +317,11 @@ logo-container info {
 }
 
 .footer {
-    color: var(--light-grey);
-    z-index: 10;
-    padding-top: 3vh;
     position: relative;
+    color: white;
+    background-color: var(--dark-grey);
+    z-index: 1;
+    padding-top: 1vh;
     width: 100%;
     text-align: center;
     font-size: 1vh;

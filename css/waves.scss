@@ -22,7 +22,6 @@
   top: 0;
   width: 300vw;
   height: 6vh;
-  animation: wave 146s infinite;
   opacity: 1;
   bottom: 0;
   transform: translate3d(0,0,0);
@@ -42,26 +41,17 @@
 }
 
 .wave:nth-of-type(3), .wave:nth-of-type(4) {
-  animation: wave 102s infinite, swell 4s ease -1.25s infinite;
+  animation: swell 4s ease -1.25s infinite;
   opacity: .4;
   left: 50%;
-  margin-left: -13vw;
+  margin-left: -60vw;
 }
 
 .wave:nth-of-type(5), .wave:nth-of-type(6) {
-    animation: wave 54s -2s infinite, swell 7s ease -5.25s infinite;
+    animation: swell 7s ease -5.25s infinite;
     opacity: .6;
     left: 50%;
-    margin-left: -77vw;
-}
-
-@keyframes wave {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100vw);
-  }
+    margin-left: -240vw;
 }
 
 @keyframes swell {
@@ -69,7 +59,7 @@
     transform: translate3d(0,0,0);
   }
   50% {
-    transform: translate3d(0,14px,0);
+    transform: translate3d(0,12px,0);
   }
 }
 
