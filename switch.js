@@ -1,10 +1,11 @@
 const ms = document.getElementsByClassName("ms-grid");
 const wave = document.getElementsByClassName("wave");
+const footer = document.getElementsByClassName("footer")[0];
 const toggle_switch = document.getElementsByClassName("switch");
 
 function toggle(){
     document.getElementById("switch").classList.toggle('toggle-on');
-
+    footer.classList.toggle('footer-light');
     for (var i = 0; i < ms.length; i++) {
         ms[i].classList.toggle("ms-grid-toggle")
         //Do something

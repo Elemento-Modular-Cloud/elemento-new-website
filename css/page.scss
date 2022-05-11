@@ -4,6 +4,15 @@
     height: fit-content;
 }
 
+.funnel-page {
+    width: 100vw;
+    // height: fit-content;
+    position: relative;
+    visibility: hidden;
+    display: none;
+    height: 0px;
+}
+
 .content {
     position: relative;
     top: 0;

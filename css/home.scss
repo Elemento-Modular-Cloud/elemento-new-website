@@ -14,6 +14,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    height: 100vh;
 }
 
 .index {
@@ -34,7 +35,7 @@ color-filler {
 
 page-container {
     position: absolute;
-    top: 100vh;
+    top: 95vh;
     width: 100vw;
     height: fit-content;
     background-color: white;
@@ -46,7 +47,7 @@ head-container {
     top: 0;
     left: 0;
     width: 70%;
-    height: 110%;
+    height: 100%;
     z-index: 12;
     opacity: 0;
     animation: fade-in .5s .3s ease-in-out;
@@ -67,7 +68,7 @@ map-fader {
     position: absolute;
     top: -5%;
     left: 0;
-    height: 110%;
+    height: 100%;
     width: 100%;
     opacity: 0;
 }
@@ -140,8 +141,9 @@ sidebar, shadow {
     top: 0;
     left: 0;
     width: 50%;
-    height: 100vh;
-    z-index: 0;
+    height: 94vh;
+    border-radius: 0 0 8px 0;
+    z-index: 2;
 }
 
 sidebar {
@@ -319,18 +321,23 @@ logo-container info {
 }
 
 .footer {
-    position: relative;
     color: white;
     background-color: var(--dark-grey);
     z-index: 1;
     padding-top: 1vh;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 1vh;
     font-family: 'Muli', sans-serif;
-    padding-bottom: .5vh;
+    padding-bottom: 1vh;
 }
 
+.footer-light {
+    color: var(--dark-grey);
+    background-color: white;
+}
 
 .switch {
     --line: #505162;
