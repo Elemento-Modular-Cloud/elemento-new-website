@@ -21,7 +21,7 @@ form-container {
     -webkit-box-shadow: 0 0 20px 0 var(--dark-grey); 
     box-shadow: 0 0 20px 0 var(--dark-grey);
     opacity: 0;
-    animation: fade-in .5s .5s ease-in-out;
+    animation: fade-in .5s 1.3s ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -62,7 +62,7 @@ form-container {
 
 @media (orientation: portrait), only screen and (pointer: coarse) {
     form-container {
-        top: 65%;
+        top: 60%;
         left: 15%;
         width: 70%;
         transform: none;

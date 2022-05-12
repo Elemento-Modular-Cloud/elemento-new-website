@@ -155,6 +155,17 @@ sidebar, shadow {
     width: 50%;
     height: 100vh;
     z-index: 0;
+    animation: move-in .7s 0s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-in {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
 }
 
 sidebar {
@@ -177,7 +188,7 @@ logo-container {
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-    z-index: 3;
+    z-index: 0;
 }
 
 logo-container logo {
@@ -185,13 +196,16 @@ logo-container logo {
     display: inline-block;
     height: var(--logo-height);
     width: 100%;
+    opacity: 0;
+    animation: fade-in 1s .2s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 logo-container logo::before, logo-container logo::after {
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
+    left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -207,6 +221,9 @@ logo-container logo::before {
     -ms-transform: scale(1.04);
     -o-transform: scale(1.04);
     transform: scale(1.04);
+    opacity: 0;
+    animation: fade-in .5s .7s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 logo-container info {
@@ -214,6 +231,9 @@ logo-container info {
     display: inline-block;
     left: 0;
     width: 100%;
+    opacity: 0;
+    animation: fade-in .5s 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 @media (orientation: portrait), only screen and (pointer: coarse) {
