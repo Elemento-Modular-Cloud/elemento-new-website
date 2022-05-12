@@ -8,13 +8,14 @@
 .chooseLang {
     display: inline-block;
     position: absolute;
-    top: 1vmin;
-    left: 1vmin;
+    top: 11px;
+    right: 230px;
     z-index: 20;
     height: var(--flag-height);
     margin-top: 0;
     width: var(--flag-height);
 }
+
 .chooseLang div {
     height: var(--flag-height);
     position: absolute;
@@ -60,7 +61,7 @@
     line-height: var(--flag-height);
     font-family: 'Muli', sans-serif;
     font-weight: bold;
-    color: var(--dark-grey);
+    color: white;
     padding-left: calc(var(--flag-width) + var(--text-hmargin));
 }
 
