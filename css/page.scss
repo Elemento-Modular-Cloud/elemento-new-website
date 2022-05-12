@@ -6,11 +6,17 @@
 
 .funnel-page {
     width: 100vw;
-    // height: fit-content;
     position: relative;
-    visibility: hidden;
-    display: none;
-    height: 0px;
+    height: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    animation: all 1s;
+    z-index: 3;
+}
+
+.funnel-page-visible {
+    overflow-y: visible;
+    max-height: max-content;
 }
 
 .content {

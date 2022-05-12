@@ -37,10 +37,10 @@ page-container {
     position: absolute;
     top: 0;
     width: 100vw;
-    margin-top: 95vh;
+    margin-top: 94vh;
     height: fit-content;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 filler {
@@ -369,7 +369,7 @@ logo-container info {
     font-size: 1vh;
     font-family: 'Muli', sans-serif;
     transform: translateY(83%);
-    // padding-bottom: 1vh;
+    padding-bottom: 1vh;
     overflow: hidden;
 }
 

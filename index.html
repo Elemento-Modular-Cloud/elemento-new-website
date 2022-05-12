@@ -122,8 +122,8 @@
             <menu>
                 <div class="switch-container">
                     <div class='toggle toggle-on' id='switch' onclick="toggle()">
-                        <div  class="toggle-text-on">Light mode</div>
-                        <div  class="toggle-text-off">Dark mode</div>
+                        <div class="toggle-text-on">Light mode</div>
+                        <div class="toggle-text-off">Dark mode</div>
                         <div class='toggle-button'></div>
                     </div>
                 </div>
@@ -147,7 +147,31 @@
                 </div>
             </div>
 
-            <link defer rel="stylesheet" href="css/subform.scss" type="text/css"/>
+            <link defer rel="stylesheet" href="css/funnel.scss" type="text/css"/>
+            <funnel-container>
+                <funnel-grid>
+                    <funnel-item>
+                        <a href="#" onclick="showDiscover()">
+                            <span lang="en">Discover</span>
+                            <span lang="it">Scopri</span>
+                        </a>
+                    </funnel-item>
+                    <funnel-item>
+                        <a href="#">
+                            <span lang="en">Buy</span>
+                            <span lang="it">Acquista</span>
+                        </a>
+                    </funnel-item>
+                    <funnel-item>
+                        <a href="#">
+                            <span lang="en">Invest</span>
+                            <span lang="it">Investi</span>
+                        </a>
+                    </funnel-item>
+                </funnel-grid>
+            </funnel-container>
+
+            <!-- <link defer rel="stylesheet" href="css/subform.scss" type="text/css"/>
             <form-container>
                 <div class="form-title">
                     <span lang="en">Getting curious? Register now!</span>
@@ -174,14 +198,15 @@
                 <div class="form-disclaimer">
                     Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
                 </div>
-            </form-container>
+            </form-container> -->
         </div>
 
         <link defer rel="stylesheet" href="css/page.scss" type="text/css"/>
         <link defer rel="stylesheet" href="css/modeselector.scss" type="text/css"/>
         <link defer rel="stylesheet" href="css/content.scss" type="text/css"/>
+        
         <page-container>
-            <div class="funnel-page">
+            <div class="funnel-page" id="discover">
                 <div class="ms-wrapper">
                     <div class="ms-grid">
                         <div class="ms-grid-item" id="content-light">
@@ -191,6 +216,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="footer footer-light">
                 Copyright © 2021-2022 Elemento Srl. Tutti i diritti riservati.<br/>
                 CF/P.IVA 03959360045 | Registrata presso il Registro Imprese di Cuneo REA 326571 | Cap. Soc. €10'604,45 i.v.<br/>
@@ -200,9 +226,10 @@
 
         <filler/>
 
-        <script defer type= "text/javascript" src="mcsub-min.js"></script>
-        <script defer type= "text/javascript" src="mcsub-form.js"></script>
+        <!-- <script defer type= "text/javascript" src="mcsub-min.js"></script> -->
+        <!-- <script defer type= "text/javascript" src="mcsub-form.js"></script> -->
         <script defer type= "text/javascript" src="switch.js"></script>
         <script defer type= "text/javascript" src="lang2.js"></script>
+        <script defer type= "text/javascript" src="funnel.js"></script>
     </body>
 </html>
