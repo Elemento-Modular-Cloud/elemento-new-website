@@ -57,6 +57,17 @@ color-filler {
     left: 0;
 }
 
+.back-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 888;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
 page-container {
     position: absolute;
     top: 0;
