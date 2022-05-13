@@ -152,7 +152,7 @@
             <funnel-container>
                 <funnel-grid>
                     <funnel-item>
-                        <a href="#" onclick="showDiscover()">
+                        <a href="#" onclick="toggleDiscover()">
                             <span lang="en">Discover</span>
                             <span lang="it">Scopri</span>
                         </a>
@@ -206,8 +206,8 @@
         <link defer rel="stylesheet" href="css/modeselector.scss" type="text/css"/>
         <link defer rel="stylesheet" href="css/content.scss" type="text/css"/>
         
-        <page-container>
-            <div class="funnel-page" id="discover">
+        <div class="page-scroller" id="discover">
+            <div class="page">
                 <div class="ms-wrapper">
                     <div class="ms-grid">
                         <div class="ms-grid-item" id="content-light">
@@ -217,7 +217,9 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <page-container>
             <div class="footer footer-light">
                 Copyright © 2021-2022 Elemento Srl. Tutti i diritti riservati.<br/>
                 CF/P.IVA 03959360045 | Registrata presso il Registro Imprese di Cuneo REA 326571 | Cap. Soc. €10'604,45 i.v.<br/>

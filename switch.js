@@ -1,4 +1,5 @@
 const ms = document.getElementsByClassName("ms-grid");
+const ps = document.getElementsByClassName("page-scroller");
 const wave = document.getElementsByClassName("wave");
 const footer = document.getElementsByClassName("footer")[0];
 const toggle_switch = document.getElementsByClassName("switch");
@@ -8,6 +9,10 @@ function toggle(){
     footer.classList.toggle('footer-light');
     for (var i = 0; i < ms.length; i++) {
         ms[i].classList.toggle("ms-grid-toggle")
+        //Do something
+    }
+    for (var l = 0; l < ps.length; l++) {
+        ps[l].classList.toggle("page-scroller-light")
         //Do something
     }
     for (var j = 0; j < wave.length; j++) {
