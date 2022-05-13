@@ -4,22 +4,18 @@ funnel-container {
     border-spacing: 1.5vh;
     padding: 1vh;
     border-collapse: separate;
-    top: 47%;
+    top: 45%;
     right: 0;
     width: 60%;
     height: fit-content;
-    // background-color: var(--dark-grey);
     transform: translate3d(10%, -50%, 0);
-    // -webkit-box-shadow: 0 0 20px 0 var(--dark-grey); 
-    // box-shadow: 0 0 20px 0 var(--dark-grey);
     opacity: 0;
     animation: fade-in .3s 1.5s ease-in-out;
     animation-fill-mode: forwards;
-    // border: 5px var(--dark-grey) solid;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    font-size: 5vh;
-    line-height: 5vh;
+    font-size: 7vh;
+    line-height: 7vh;
 }
 
 funnel-grid {
@@ -29,26 +25,32 @@ funnel-grid {
     text-align: center;
 }
 
-@media (orientation: portrait), only screen and (pointer: coarse) {
-    funnel-container {
-        top: 60%;
-        left: 15%;
-        width: 70%;
-        transform: none;
-        z-index: 11;
-    }
-
-    funnel-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 funnel-item {
     height: 11vh;
 }
 
+@media (orientation: portrait), only screen and (pointer: coarse) {
+    funnel-grid {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    funnel-container {
+        top: 65%;
+        left: 0;
+        width: 100%;
+        transform: none;
+        z-index: 20;
+        padding: 0;
+        font-size: 5vh;
+        line-height: 5vh;
+    }
+}
+
 funnel-item a {
     color: inherit;
+    position: relative;
     text-decoration: none;
     width: 50vw;
     text-transform: uppercase;
@@ -56,22 +58,54 @@ funnel-item a {
   
 funnel-item a span {
     background:
-      linear-gradient(
-        to right,
-        transparent,
-        transparent
-      ),
-      linear-gradient(
-        to right,
-        var(--light-orange),
-        var(--dark-orange)
-    );
-    background-size: 300% 3px, 0 3px;
-    background-position: 100% 100%, 0 100%;
+        linear-gradient(
+            to right,
+            var(--light-orange),
+            var(--dark-orange)
+        );
+    background-size: 0 3px;
+    background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
 }
   
 funnel-item a:hover span {
-    background-size: 0 3px, 100% 3px;
+    background-size: 100% 3px;
+}
+
+@media (orientation: portrait), only screen and (pointer: coarse) {
+    funnel-item {
+        display: table-cell;
+        height: 11vh;
+        min-width: 33vw;
+        max-width: 33vw;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    funnel-item:first-of-type {
+        color: var(--dark-grey)
+    }
+
+    funnel-item:first-of-type a span {
+        background:
+            linear-gradient(
+                to right,
+                transparent,
+                transparent
+            ),
+            linear-gradient(
+            to right,
+            var(--light-grey),
+            var(--dark-grey)
+            );
+            background-size: 0 3px;
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 400ms;
+    }
+
+    funnel-item:first-of-type a:hover span {
+        background-size: 100% 3px;
+    }
 }

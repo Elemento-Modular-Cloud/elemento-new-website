@@ -363,12 +363,12 @@ logo-container info {
     color: white;
     background-color: var(--dark-grey);
     z-index: 2;
-    padding-top: 1vh;
+    // padding-top: 1vh;
     width: 100%;
     text-align: center;
     font-size: 1vh;
     font-family: 'Muli', sans-serif;
-    transform: translateY(83%);
+    transform: translateY(100%);
     padding-bottom: 1vh;
     overflow: hidden;
 }
