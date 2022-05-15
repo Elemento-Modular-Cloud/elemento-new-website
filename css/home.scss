@@ -44,7 +44,7 @@ color-filler {
     width: 100vw;
     z-index: 20;
     background-color: white;
-    transition: left .7s ease-in-out;
+    transition: left .7s .1s ease-in-out;
 }
 
 .page-scroller-light {
@@ -55,17 +55,56 @@ color-filler {
     position: absolute;
     top: 0;
     left: 0;
+    transition: left .7s 0s ease-in-out;
 }
 
 .back-button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     z-index: 888;
-    background-color: antiquewhite;
+    // background-color: red;
     cursor: pointer;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: visibility, opacity;
+}
+
+.visible-scroller-page .back-button {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    transition-delay: .55s;
+}
+
+.back-button::before, .back-button::after {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+}
+
+.ms-button:nth-of-type(odd) .back-button::before, .ms-button:nth-of-type(odd) .back-button::after {
+    background-color: var(--dark-grey);
+}
+
+.ms-button:nth-of-type(even) .back-button::before, .ms-button:nth-of-type(even) .back-button::after {
+    background-color: var(--dark-orange);
+}
+
+.back-button::before {
+    transform: rotate(45deg);
+}
+.back-button::after {
+    transform: rotate(-45deg);
 }
 
 page-container {

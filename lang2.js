@@ -5,6 +5,8 @@ const it_btn = document.getElementById('it-lang').classList;
 const en_btn = document.getElementById('en-lang').classList;
 const contentlight = document.getElementById('content-light');
 const contentdark = document.getElementById('content-dark');
+const investlight = document.getElementById('invest-light');
+const investdark = document.getElementById('invest-dark');
 const xmlhttp = new XMLHttpRequest();
 
 function getHTML(url) {
@@ -23,8 +25,10 @@ function getHTML(url) {
     });
 }
 
-var en_page = '';
-var it_page = '';
+var en_content_page = '';
+var it_content_page = '';
+var en_invest_page = '';
+var it_invest_page = '';
 
 function makeVisible(items) {
     items.forEach(item => {
@@ -41,15 +45,21 @@ function makeInvisible(items) {
 async function useEN() {
     makeInvisible(langitems_it);
     makeVisible(langitems_en);
-    if(en_page === ''){
+    if(en_content_page === ''){
         console.debug("Lazy loading EN page");
-        en_page = await getHTML("content_en.html");
+        en_content_page = await getHTML("content_en.html");
+    }
+    if(en_invest_page === ''){
+        console.debug("Lazy loading EN page");
+        en_invest_page = await getHTML("invest_en.html");
     }
 
     contentlight.innerHTML = '';
     contentdark.innerHTML = '';
-    contentlight.innerHTML = en_page;
-    contentdark.innerHTML = en_page;
+    contentlight.innerHTML = en_content_page;
+    contentdark.innerHTML = en_content_page;
+    investlight.innerHTML = en_invest_page;
+    investdark.innerHTML = en_invest_page;
     en_btn.add('chosen');
     it_btn.remove('chosen');
 }
@@ -57,15 +67,21 @@ async function useEN() {
 async function useIT() {
     makeInvisible(langitems_en);
     makeVisible(langitems_it);
-    if(it_page === ''){
+    if(it_content_page === ''){
         console.debug("Lazy loading IT page");
-        it_page = await getHTML("content_it.html");
+        it_content_page = await getHTML("content_it.html");
+    }
+    if(it_invest_page === ''){
+        console.debug("Lazy loading IT page");
+        it_invest_page = await getHTML("invest_it.html");
     }
 
     contentlight.innerHTML = '';
     contentdark.innerHTML = '';
-    contentlight.innerHTML = it_page;
-    contentdark.innerHTML = it_page;
+    contentlight.innerHTML = it_content_page;
+    contentdark.innerHTML = it_content_page;
+    investlight.innerHTML = it_invest_page;
+    investdark.innerHTML = it_invest_page;
     it_btn.add('chosen');
     en_btn.remove('chosen');
 }

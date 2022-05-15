@@ -5,16 +5,6 @@
     overflow-y: scroll;
 }
 
-.funnel-page {
-    width: 100vw;
-    position: relative;
-    height: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    animation: all 1s;
-    z-index: 3;
-}
-
 .content {
     position: relative;
     top: 0;
