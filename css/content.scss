@@ -178,9 +178,9 @@ feature:hover .name {
 }
 
 .invest-icon img{
-    height: 35vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    height: 30vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
     transform: translate3d(0,0,0) scale(1);
     transition: transform .3s ease-in-out, filter .3s ease-in-out;
 }
@@ -190,4 +190,12 @@ feature:hover .name {
     transform: translate3d(0,-6px,0) scale(1.02);
     -webkit-filter: drop-shadow(0 12px 12px var(--dark-orange));
     filter: drop-shadow(0 12px 12px var(--dark-orange));
+}
+
+.invest-icon img:first-of-type {
+    margin-left: 3vw;
+}
+
+.invest-icon img:last-of-type {
+    margin-right: 3vw;
 }
