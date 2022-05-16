@@ -8,17 +8,18 @@
 .chooseLang {
     display: inline-block;
     position: absolute;
-    top: 1vmin;
-    left: 1vmin;
-    z-index: 20;
+    top: 11px;
+    right: 230px;
+    z-index: 200;
     height: var(--flag-height);
     margin-top: 0;
-    width: var(--flag-height);
+    width: var(--flag-width);
 }
+
 .chooseLang div {
     height: var(--flag-height);
     position: absolute;
-    width: var(--flag-height);
+    width: var(--flag-width);
 }
 .lang {
     cursor: pointer;
@@ -31,10 +32,10 @@
     -webkit-transition: 0.76s;
     -o-transition: 0.76s;
     transition: 0.76s;
-    width: var(--flag-height);
+    width: var(--flag-width);
     background-size: contain;
     background-position: center center;
-    border-radius: calc(var(--flag-height)/2);
+    border-radius: 10px;
 }
 
 .it-lang {
@@ -60,7 +61,7 @@
     line-height: var(--flag-height);
     font-family: 'Muli', sans-serif;
     font-weight: bold;
-    color: var(--dark-grey);
+    color: white;
     padding-left: calc(var(--flag-width) + var(--text-hmargin));
 }
 

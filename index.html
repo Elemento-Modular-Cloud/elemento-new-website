@@ -60,16 +60,12 @@
         <link rel="preload" href="css/modeselector.scss" as="style">
         <link rel="preload" href="css/content.scss" as="style">
         <link rel="preload" href="css/chooselang.scss" as="style">
-        <!-- <link rel="preload" href="css/choosemode.scss" as="style"> -->
 
         <link rel="stylesheet" href="css/fonts.scss" type="text/css"/>
         <link rel="stylesheet" href="css/colors.scss" type="text/css"/>
         <link rel="stylesheet" href="css/variables.scss" type="text/css"/>
         <link defer rel="stylesheet" href="css/home.scss" type="text/css"/>
 
-        <!-- <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script> -->
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-96EGS4QPTF"></script>
         <script>
@@ -87,7 +83,6 @@
             <link defer rel="stylesheet" href="css/menu.scss" type="text/css"/>
             <link defer rel="stylesheet" href="css/switch.scss" type="text/css"/>
             <link defer rel="stylesheet" href="css/chooselang.scss" type="text/css"/>
-            <!-- <link defer rel="stylesheet" href="css/choosemode.scss" type="text/css"/> -->
 
             <head-container>
                 <logo-container>
@@ -113,36 +108,11 @@
                 </div>
             </div>
 
-            <!-- <div class="chooseMode">
-                <div>
-                    <span id="light-mode" class="mode light-mode"></span>
-                    <span id="dark-mode" class="mode dark-mode chosen"></span>
-                </div>
-            </div> -->
-
             <menu>
-                <span lang="en" id="menu_en">
-                    <a href="#feat"><div class="item">Features</div></a>
-                    <a href="#products"><div class="item">Products</div></a>
-                    <a href="#getin"><div class="item">Get in</div></a>
-                    <a href="#team"><div class="item">Team</div></a>
-                    <a href="#partners"><div class="item">Partners</div></a>
-                    <a href="#awards"><div class="item">Awards</div></a>
-                    <a href="#contacts"><div class="item">Contacts</div></a>
-                </span>
-                <span lang="it" id="menu_it">
-                    <a href="#feat"><div class="item">Caratterstiche</div></a>
-                    <a href="#products"><div class="item">Prodotti</div></a>
-                    <a href="#getin"><div class="item">Come iniziare</div></a>
-                    <a href="#team"><div class="item">Squadra</div></a>
-                    <a href="#partners"><div class="item">Partner</div></a>
-                    <a href="#awards"><div class="item">Premi</div></a>
-                    <a href="#contacts"><div class="item">Contatti</div></a>
-                </span>
                 <div class="switch-container">
                     <div class='toggle toggle-on' id='switch' onclick="toggle()">
-                        <div  class="toggle-text-on">Light mode</div>
-                        <div  class="toggle-text-off">Dark mode</div>
+                        <div class="toggle-text-on">Light mode</div>
+                        <div class="toggle-text-off">Dark mode</div>
                         <div class='toggle-button'></div>
                     </div>
                 </div>
@@ -166,7 +136,33 @@
                 </div>
             </div>
 
-            <link defer rel="stylesheet" href="css/subform.scss" type="text/css"/>
+            <link defer rel="stylesheet" href="css/funnel.scss" type="text/css"/>
+            <nav>
+                <funnel-container>
+                    <funnel-grid>
+                        <funnel-item>
+                            <a href="#" onclick="toggleDiscover()">
+                                <span lang="en">Discover</span>
+                                <span lang="it">Scopri</span>
+                            </a>
+                        </funnel-item>
+                        <!-- <funnel-item>
+                            <a href="#">
+                                <span lang="en">Buy</span>
+                                <span lang="it">Acquista</span>
+                            </a>
+                        </funnel-item> -->
+                        <funnel-item>
+                            <a href="#" onclick="toggleInvest()">
+                                <span lang="en">Invest</span>
+                                <span lang="it">Investi</span>
+                            </a>
+                        </funnel-item>
+                    </funnel-grid>
+                </funnel-container>
+            </nav>
+
+            <!-- <link defer rel="stylesheet" href="css/subform.scss" type="text/css"/>
             <form-container>
                 <div class="form-title">
                     <span lang="en">Getting curious? Register now!</span>
@@ -193,13 +189,22 @@
                 <div class="form-disclaimer">
                     Your email will be handled by <a href="https://mailchimp.com">www.mailchimp.com</a>
                 </div>
-            </form-container>
+            </form-container> -->
         </div>
 
         <link defer rel="stylesheet" href="css/page.scss" type="text/css"/>
         <link defer rel="stylesheet" href="css/modeselector.scss" type="text/css"/>
         <link defer rel="stylesheet" href="css/content.scss" type="text/css"/>
-        <page-container>
+
+        <!-- <div class="back-button" onclick="closeDiscover()"/> -->
+
+        <div class="page-scroller" id="discover">
+            <div class="ms-button ms-button-visible">
+                <div class="back-button" onclick="closeDiscover()"></div>
+            </div>
+            <div class="ms-button">
+                <div class="back-button" onclick="closeDiscover()"></div>
+            </div>
             <div class="page">
                 <div class="ms-wrapper">
                     <div class="ms-grid">
@@ -210,17 +215,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="page-scroller" id="invest">
+            <div class="ms-button ms-button-visible">
+                <div class="back-button" onclick="closeInvest()"></div>
+            </div>
+            <div class="ms-button">
+                <div class="back-button" onclick="closeInvest()"></div>
+            </div>
+            <div class="page">
+                <div class="ms-wrapper">
+                    <div class="ms-grid">
+                        <div class="ms-grid-item" id="invest-light">
+                        </div>
+                        <div class="ms-grid-item" id="invest-dark">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <page-container>
+            <div class="footer footer-light">
+                Copyright © 2021-2022 Elemento Srl. Tutti i diritti riservati.<br/>
+                CF/P.IVA 03959360045 | Registrata presso il Registro Imprese di Cuneo REA 326571 | Cap. Soc. €10'604,45 i.v.<br/>
+                Via Antonio Bassignano 34b - 12100 - Cuneo (CN) - Italy<br/><br/>
+            </div>
         </page-container>
 
-        <!-- <div class="footer footer-light">
-            Copyright © 2021-2022 Elemento Srl. Tutti i diritti riservati.<br/>
-            CF/P.IVA 03959360045 | Registrata presso il Registro Imprese di Cuneo REA 326571 | Cap. Soc. €10'604,45 i.v.<br/>
-            Via Antonio Bassignano 34b - 12100 - Cuneo (CN) - Italy<br/>
-        </div> -->
+        <filler/>
 
-        <script defer type= "text/javascript" src="mcsub-min.js"></script>
-        <script defer type= "text/javascript" src="mcsub-form.js"></script>
         <script defer type= "text/javascript" src="switch.js"></script>
         <script defer type= "text/javascript" src="lang2.js"></script>
+        <script defer type= "text/javascript" src="funnel.js"></script>
     </body>
 </html>

@@ -1,6 +1,6 @@
 .ocean {
   position:relative;
-  top: 96vh;
+  top: 88.5vh;
   left: 0;
   height: fit;
   width:100vw;
@@ -44,14 +44,14 @@
   animation: swell 4s ease -1.25s infinite;
   opacity: .4;
   left: 50%;
-  margin-left: -60vw;
+  margin-left: -80vw;
 }
 
 .wave:nth-of-type(5), .wave:nth-of-type(6) {
     animation: swell 7s ease -5.25s infinite;
     opacity: .6;
     left: 50%;
-    margin-left: -240vw;
+    margin-left: -120vw;
 }
 
 @keyframes swell {

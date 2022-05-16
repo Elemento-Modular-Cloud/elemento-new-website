@@ -3,6 +3,7 @@ html {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
@@ -14,6 +15,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    height: 100vh;
 }
 
 .index {
@@ -32,12 +34,97 @@ color-filler {
     background-color: var(--dark-grey);
 }
 
+.page-scroller {
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100vw;
+    z-index: 20;
+    background-color: white;
+    transition: left .7s .1s ease-in-out;
+}
+
+.page-scroller-light {
+    background-color: var(--dark-grey);
+}
+
+.visible-scroller-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left .7s 0s ease-in-out;
+}
+
+.back-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    z-index: 888;
+    // background-color: red;
+    cursor: pointer;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: visibility, opacity;
+}
+
+.visible-scroller-page .back-button {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    transition-delay: .55s;
+}
+
+.back-button::before, .back-button::after {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+}
+
+.ms-button:nth-of-type(odd) .back-button::before, .ms-button:nth-of-type(odd) .back-button::after {
+    background-color: var(--dark-grey);
+}
+
+.ms-button:nth-of-type(even) .back-button::before, .ms-button:nth-of-type(even) .back-button::after {
+    background-color: var(--dark-orange);
+}
+
+.back-button::before {
+    transform: rotate(45deg);
+}
+.back-button::after {
+    transform: rotate(-45deg);
+}
+
 page-container {
     position: absolute;
-    top: 100vh;
+    top: 0;
     width: 100vw;
+    margin-top: 94vh;
     height: fit-content;
     background-color: white;
+    z-index: 2;
+}
+
+filler {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dark-grey);
+    height: .8vh;
+    width: 100%;
     z-index: 1;
 }
 
@@ -46,11 +133,11 @@ head-container {
     top: 0;
     left: 0;
     width: 70%;
-    height: 110%;
+    height: 100%;
     z-index: 12;
-    opacity: 0;
-    animation: fade-in .5s .3s ease-in-out;
-    animation-fill-mode: forwards;
+    // opacity: 0;
+    // animation: fade-in .5s .3s ease-in-out;
+    // animation-fill-mode: forwards;
 }
 
 map-container {
@@ -67,7 +154,7 @@ map-fader {
     position: absolute;
     top: -5%;
     left: 0;
-    height: 110%;
+    height: 100%;
     width: 100%;
     opacity: 0;
 }
@@ -142,6 +229,17 @@ sidebar, shadow {
     width: 50%;
     height: 100vh;
     z-index: 0;
+    animation: move-in .7s 0s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-in {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
 }
 
 sidebar {
@@ -164,7 +262,7 @@ logo-container {
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-    z-index: 3;
+    z-index: 0;
 }
 
 logo-container logo {
@@ -172,19 +270,28 @@ logo-container logo {
     display: inline-block;
     height: var(--logo-height);
     width: 100%;
+    // opacity: 0;
+    // animation: fade-in 1s .8s ease-in-out;
+    // animation-fill-mode: forwards;
 }
 
 logo-container logo::before, logo-container logo::after {
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
+    left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
     background-image: url('../img/logos/dark.svg');
     background-repeat: no-repeat;
     background-position-x: center;
+}
+
+logo-container logo::after {
+    opacity: 0;
+    animation: fade-in .5s .6s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 logo-container logo::before {
@@ -201,6 +308,9 @@ logo-container info {
     display: inline-block;
     left: 0;
     width: 100%;
+    opacity: 0;
+    animation: fade-in .5s 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 @media (orientation: portrait), only screen and (pointer: coarse) {
@@ -236,6 +346,8 @@ logo-container info {
     line-height: 7vh;
     padding: 0;
     padding-top: 2vh;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
 }
 
 .titleleft {
@@ -319,18 +431,26 @@ logo-container info {
 }
 
 .footer {
-    position: relative;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     color: white;
     background-color: var(--dark-grey);
-    z-index: 1;
-    padding-top: 1vh;
+    z-index: 2;
+    // padding-top: 1vh;
     width: 100%;
     text-align: center;
     font-size: 1vh;
     font-family: 'Muli', sans-serif;
-    padding-bottom: .5vh;
+    transform: translateY(100%);
+    padding-bottom: 1vh;
+    overflow: hidden;
 }
 
+.footer-light {
+    color: var(--dark-grey);
+    background-color: white;
+}
 
 .switch {
     --line: #505162;

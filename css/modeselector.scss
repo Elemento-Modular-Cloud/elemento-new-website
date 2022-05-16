@@ -32,10 +32,12 @@
     grid-column: 1;
 }
 
+.ms-grid-item:first-of-type content-wrapper container center-tagline,
 .ms-grid-item:first-of-type content-wrapper container tagline {
     color: var(--dark-grey);
 }
 
+.ms-grid-item:first-of-type content-wrapper container center-name,
 .ms-grid-item:first-of-type content-wrapper container name {
     color: var(--dark-orange);
 }
@@ -56,4 +58,12 @@
 
 .ms-grid-toggle {
     left: -100%;
+}
+
+.ms-button {
+    opacity: 0;
+}
+
+.ms-button-visible {
+    opacity: 1;
 }

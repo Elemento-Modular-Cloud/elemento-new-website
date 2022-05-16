@@ -10,11 +10,11 @@ menu {
     margin: 0;
 }
 
-@media (orientation: portrait), only screen and (pointer: coarse) {
-    menu {
-        display: none;
-    }
-}
+// @media (orientation: portrait), only screen and (pointer: coarse) {
+//     menu {
+//         display: none;
+//     }
+// }
 
 menu .item {
     display: table-cell;

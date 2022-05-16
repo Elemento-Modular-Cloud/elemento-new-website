@@ -38,6 +38,13 @@ content-wrapper:nth-of-type(even) picture img, content-wrapper:nth-of-type(odd) 
     text-align: left;
 }
 
+.full-width {
+    grid-column-start: 1 !important;
+    grid-column-end: 2 !important;
+    width: 210%;
+    height: 90vh;
+}
+
 .content-title {
     text-transform: uppercase;
     color: lighten(var(--light-grey), 20%);
@@ -52,13 +59,16 @@ content-wrapper:nth-of-type(even) picture img, content-wrapper:nth-of-type(odd) 
 }
 
 content-wrapper container name,
+content-wrapper container center-name,
 content-wrapper container tagline,
+content-wrapper container center-tagline,
 content-wrapper container ctext,
 content-wrapper container a {
     display: inline-block;
     width: 100%;
 }
 
+content-wrapper container center-name,
 content-wrapper container name {
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
@@ -67,13 +77,23 @@ content-wrapper container name {
     padding: 0;
 }
 
-content-wrapper container tagline {
+content-wrapper container center-name {
+    text-align: center;
+    font-size: 6vmin;
+}
+
+content-wrapper container tagline,
+content-wrapper container center-tagline {
     font-family: 'Open Sans', sans-serif;
     font-size: 4vmin;
     color: white;
     padding: 0;
     padding-top: 3.5vmin;
     padding-bottom: 3.5vmin;
+}
+
+content-wrapper container center-tagline {
+    text-align: center;
 }
 
 content-wrapper container ctext,
@@ -151,4 +171,31 @@ feature .description {
 
 feature:hover .name {
     color: var(--dark-orange);
+}
+
+.invest-icon a{
+    width: fit-content;
+}
+
+.invest-icon img{
+    height: 30vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    transform: translate3d(0,0,0) scale(1);
+    transition: transform .3s ease-in-out, filter .3s ease-in-out;
+}
+
+.invest-icon img:hover{
+    cursor: pointer;
+    transform: translate3d(0,-6px,0) scale(1.02);
+    -webkit-filter: drop-shadow(0 12px 12px var(--dark-orange));
+    filter: drop-shadow(0 12px 12px var(--dark-orange));
+}
+
+.invest-icon img:first-of-type {
+    margin-left: 3vw;
+}
+
+.invest-icon img:last-of-type {
+    margin-right: 3vw;
 }

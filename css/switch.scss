@@ -22,7 +22,7 @@
     -webkit-transition: border-color .6s  ease-out;
     transition: border-color .6s  ease-out;
     box-sizing: border-box;
-    box-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
+    // box-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
 }
 
 .toggle.toggle-on{
@@ -68,7 +68,8 @@
     -webkit-user-select: none; /* Chrome/Safari */    
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
-    text-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
+    user-select: none;
+    // text-shadow: 0px 0px 12px var(--dark-grey), 0px 0px 6px var(--dark-grey), 0px 0px 6px var(--dark-grey);
 }
 
 .toggle-on .toggle-text-on{
@@ -92,7 +93,7 @@
     left: 10px;
     right: 10px;
     background-color: rgba(75, 122, 141, .1);
-    box-shadow: 0 0 12px rgba(75, 122, 141, .2);
+    // box-shadow: 0 0 12px rgba(75, 122, 141, .2);
     -webkit-transition: opacity 4.5s 1s;
     transition: opacity 4.5s 1s;
 }
