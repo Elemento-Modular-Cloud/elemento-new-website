@@ -226,7 +226,8 @@ sidebar, shadow {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 35vw;
+    background-color: var(--dark-orange);
     height: 100vh;
     z-index: 0;
     animation: move-in .7s 0s ease-in-out;
@@ -240,11 +241,6 @@ sidebar, shadow {
     100% {
         width: 50%;
     }
-}
-
-sidebar {
-    width: 35vw;
-    background-color: var(--dark-orange);
 }
 
 shadow {
