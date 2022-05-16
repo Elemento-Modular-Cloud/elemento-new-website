@@ -1,14 +1,1 @@
-:root{
-    --logo-container-height: 60%;
-    --logo-container-width: 70%;
-    --logo-height: 30vh;
-    --menu-accent: var(--dark-accent);
-    --font-scale: 1.5;
-    --border-size: 1vh;
-}
-
-@media (orientation: landscape){
-  :root{
-    --logo-height: 50vh;
-  }
-}
+@charset "utf-8";:root{--logo-container-height:60%;--logo-container-width:70%;--logo-height:30vh;--menu-accent:var(--dark-accent);--font-scale:1.5;--border-size:1vh}@media (orientation:landscape){:root{--logo-height:50vh}}
