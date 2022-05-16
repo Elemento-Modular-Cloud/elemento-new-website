@@ -226,11 +226,10 @@ map-shadow {
     position: absolute;
     top: 0;
     left: 0;
-    width: 35vw;
     background-color: var(--dark-orange);
     height: 100vh;
     z-index: 0;
-    animation: move-in .7s 0s ease-in-out;
+    animation: move-in .7s ease-in-out;
     animation-fill-mode: forwards;
 }
 
