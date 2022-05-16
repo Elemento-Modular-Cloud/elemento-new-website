@@ -222,7 +222,7 @@ map-shadow {
     }
 }
 
-sidebar, shadow {
+.sidebar {
     position: absolute;
     top: 0;
     left: 0;
@@ -241,13 +241,6 @@ sidebar, shadow {
     100% {
         width: 50vw;
     }
-}
-
-shadow {
-    left: 0;
-    width: 35%;
-    -webkit-box-shadow: 5px 0 15px 5px var(--dark-grey); 
-    box-shadow: 5px 0 15px 5px var(--dark-grey);
 }
 
 logo-container {
